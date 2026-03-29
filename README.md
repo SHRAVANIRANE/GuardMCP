@@ -1,52 +1,74 @@
 # GuardMCP
 
-### Deterministic Runtime Semantic Enforcement for Agentic Tool Execution
+### Deterministic Runtime Semantic Enforcement for Securing Agentic Tool Execution
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
-![Research](https://img.shields.io/badge/Type-Research%20Prototype-green)
+![Type](https://img.shields.io/badge/Project-Research%20Prototype-green)
 ![Status](https://img.shields.io/badge/Status-Active-orange)
+
+---
 
 ## 🔍 Overview
 
-GuardMCP is a research prototype that detects semantic misalignment between user intent and agent actions using **directional vector projection** instead of traditional cosine similarity.
+GuardMCP is a research-oriented prototype focused on improving the safety of **agentic AI systems** during tool execution.
 
-## 🚨 Problem
+Modern AI agents can perform actions that appear relevant to user intent but may include **hidden or unintended behaviors**. This project explores a structured mechanism to detect such misalignments at runtime.
 
-Cosine similarity is symmetric and fails to detect **hidden malicious intent** in agent actions.
+---
 
-## 💡 Proposed Solution
+## 🚨 Problem Statement
 
-We introduce a **Directional Intent–Action Alignment** method:
+Existing approaches (e.g., similarity-based checks) evaluate whether an agent’s action is *related* to user intent but often fail to detect **additional embedded semantics** that may lead to unsafe execution.
 
-- Project action vector onto intent vector
-- Compute orthogonal component (semantic leakage)
-- Block actions if leakage exceeds threshold
+This creates a critical gap in **AI safety and tool governance**.
+
+---
+
+## 💡 Proposed Approach (High-Level)
+
+GuardMCP introduces a **direction-aware semantic verification mechanism** that evaluates how closely an action aligns with the intended objective while identifying potential deviations.
+
+Instead of relying solely on similarity scores, the system analyzes whether an action contains **semantic components beyond the intended scope**.
+
+> The goal is to enable **runtime enforcement of intent-aligned behavior** in AI agents.
+
+---
 
 ## 🧠 Key Insight
 
-> “Not all similar actions are safe — hidden semantics matter.”
+> “Semantic similarity alone is insufficient — safe execution requires detecting hidden deviations from intent.”
+
+---
 
 ## ⚙️ Tech Stack
 
-- Python
-- Sentence Transformers
-- NumPy
-- Pandas
+* Python
+* Sentence Transformers (Embeddings)
+* NumPy (Vector Operations)
+* Pandas (Evaluation)
+
+---
+
+## 🧪 Experimental Setup
+
+The prototype simulates agent behavior using:
+
+* Intent–Action pairs
+* Safe vs Misaligned scenarios
+* Baseline comparison methods
+* Structured evaluation pipeline
+
+---
 
 ## 📊 Features
 
-- Directional semantic verification
-- Cosine similarity baseline comparison
-- Adversarial test cases
-- Evaluation pipeline
+* Semantic alignment verification module
+* Baseline comparison (similarity-based)
+* Adversarial-style test scenarios
+* Reproducible experiment pipeline
+* Result logging for analysis
 
-## 🧪 Example
-
-Intent: "Read a file"
-Action: "Read file and send data to server"
-
-✔ Cosine Similarity → HIGH (incorrectly allows)
-✔ GuardMCP → BLOCK (detects extra intent)
+---
 
 ## 🚀 How to Run
 
@@ -55,18 +77,55 @@ pip install -r requirements.txt
 python experiments/run_experiments.py
 ```
 
+---
+
 ## 📁 Project Structure
 
-(see folders)
+```
+GuardMCP/
+│
+├── src/                # Core modules (embedding, alignment, evaluation)
+├── experiments/        # Experiment runner
+├── results/            # Output data
+├── docs/               # Documentation (methodology, architecture)
+├── main.py             # Quick demo
+├── config.py           # Parameters
+└── README.md
+```
 
-## 📌 Future Work
+---
 
-- Adaptive epsilon tuning
-- Real agent integration
-- Runtime enforcement layer
+## 📌 Applications
+
+* AI Agent Safety
+* Tool Execution Governance
+* Autonomous System Monitoring
+* Secure LLM-based Workflows
+
+---
+
+## 🔮 Future Work
+
+* Adaptive threshold tuning
+* Integration with real agent frameworks
+* Real-time enforcement layer
+* Extended adversarial evaluation
+
+---
+
+## ⚠️ Note
+
+This project is a **research prototype** designed to demonstrate a novel concept in semantic alignment and is not a full production system.
 
 ---
 
 ## 👩‍💻 Author
 
-Shravani Rane
+**Shravani Rane**
+BSc Computer Science
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
