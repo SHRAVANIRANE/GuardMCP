@@ -122,7 +122,6 @@ This project is a **research prototype** designed to demonstrate a novel concept
 ## 👩‍💻 Author
 
 **Shravani Rane**
-BSc Computer Science
 
 ---
 
