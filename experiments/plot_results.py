@@ -20,19 +20,30 @@ def main():
             "Run experiments/run_experiments.py first."
         )
 
-    summary_df = pd.read_csv(SUMMARY_PATH).sort_values("epsilon")
+    summary_df = pd.read_csv(SUMMARY_PATH).sort_values(["method", "threshold"])
     PLOTS_DIR.mkdir(parents=True, exist_ok=True)
 
-    plt.figure(figsize=(8, 5))
-    plt.plot(summary_df["epsilon"], summary_df["precision"], marker="o", label="Precision")
-    plt.plot(summary_df["epsilon"], summary_df["recall"], marker="o", label="Recall")
+    fig, axes = plt.subplots(1, 3, figsize=(15, 4.5), sharex=True, sharey=True)
+    metrics = ["accuracy", "precision", "recall"]
 
-    plt.xlabel("Epsilon")
-    plt.ylabel("Score")
-    plt.ylim(0, 1.05)
-    plt.title("Precision and Recall vs Epsilon")
-    plt.grid(alpha=0.3)
-    plt.legend()
+    for axis, metric_name in zip(axes, metrics):
+        for method in summary_df["method"].unique():
+            method_df = summary_df[summary_df["method"] == method]
+            axis.plot(
+                method_df["threshold"],
+                method_df[metric_name],
+                marker="o",
+                label=method.title(),
+            )
+
+        axis.set_title(metric_name.title())
+        axis.set_xlabel("Threshold")
+        axis.set_ylim(0, 1.05)
+        axis.grid(alpha=0.3)
+
+    axes[0].set_ylabel("Score")
+    axes[-1].legend()
+    fig.suptitle("Directional vs Cosine Metrics Across Thresholds")
     plt.tight_layout()
     plt.savefig(PLOT_PATH, dpi=200)
     plt.close()

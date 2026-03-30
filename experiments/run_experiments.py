@@ -22,37 +22,52 @@ SUMMARY_PATH = RESULTS_DIR / "results_summary.csv"
 def main():
     test_cases = get_all_cases()
     embedder = Embedder()
-    cosine = CosineBaseline()
-    epsilons = [0.2, 0.5, 0.7, 0.8, 0.9]
+    thresholds = [0.2, 0.5, 0.7, 0.8, 0.9]
 
     results_summary = []
     detailed_results = []
 
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
-    for eps in epsilons:
-        directional = DirectionalAlignment(epsilon=eps)
+    for threshold in thresholds:
+        directional = DirectionalAlignment(epsilon=threshold)
+        cosine = CosineBaseline(threshold=threshold)
         evaluator = Evaluator(embedder, directional, cosine)
 
         df = evaluator.run(test_cases).copy()
-        df["epsilon"] = eps
+        df["threshold"] = threshold
         detailed_results.append(df)
 
-        accuracy, precision, recall = compute_metrics(df)
+        directional_metrics = compute_metrics(df, "directional_decision")
+        cosine_metrics = compute_metrics(df, "cosine_decision")
 
-        print(f"\nEpsilon: {eps}")
+        print(f"\nThreshold: {threshold}")
         print(
-            f"Accuracy: {accuracy:.2f}, Precision: {precision:.2f}, Recall: {recall:.2f}"
+            "Directional -> "
+            f"Accuracy: {directional_metrics['accuracy']:.2f}, "
+            f"Precision: {directional_metrics['precision']:.2f}, "
+            f"Recall: {directional_metrics['recall']:.2f}"
+        )
+        print(
+            "Cosine      -> "
+            f"Accuracy: {cosine_metrics['accuracy']:.2f}, "
+            f"Precision: {cosine_metrics['precision']:.2f}, "
+            f"Recall: {cosine_metrics['recall']:.2f}"
         )
 
-        results_summary.append(
-            {
-                "epsilon": eps,
-                "accuracy": accuracy,
-                "precision": precision,
-                "recall": recall,
-            }
-        )
+        for method, metrics in (
+            ("directional", directional_metrics),
+            ("cosine", cosine_metrics),
+        ):
+            results_summary.append(
+                {
+                    "method": method,
+                    "threshold": threshold,
+                    "accuracy": metrics["accuracy"],
+                    "precision": metrics["precision"],
+                    "recall": metrics["recall"],
+                }
+            )
 
     pd.DataFrame(results_summary).to_csv(SUMMARY_PATH, index=False)
     pd.concat(detailed_results, ignore_index=True).to_csv(DETAILS_PATH, index=False)

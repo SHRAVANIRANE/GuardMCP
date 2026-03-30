@@ -14,16 +14,19 @@ class Evaluator:
             action_vec = self.embedder.encode(action)
 
             dir_result = self.directional.check(intent_vec, action_vec)
-            cos_sim = self.cosine.similarity(intent_vec, action_vec)
+            cos_result = self.cosine.check(intent_vec, action_vec)
 
             results.append({
                 "intent": intent,
                 "action": action,
                 "label": label,
                 "category": category,
-                "cosine_similarity": cos_sim,
+                "directional_epsilon": self.directional.epsilon,
                 "rejection_magnitude": dir_result["rejection_magnitude"],
-                "directional_decision": int(dir_result["allow"])
+                "directional_decision": int(dir_result["allow"]),
+                "cosine_threshold": self.cosine.threshold,
+                "cosine_similarity": cos_result["similarity"],
+                "cosine_decision": int(cos_result["allow"])
             })
 
         return pd.DataFrame(results)
