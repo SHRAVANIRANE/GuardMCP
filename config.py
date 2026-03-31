@@ -1,0 +1,10 @@
+from pathlib import Path
+
+
+ROOT_DIR = Path(__file__).resolve().parent
+RESULTS_DIR = ROOT_DIR / "results"
+BEST_THRESHOLDS_PATH = RESULTS_DIR / "best_thresholds.csv"
+
+DEFAULT_MODEL_NAME = "all-MiniLM-L6-v2"
+DEFAULT_DIRECTIONAL_THRESHOLD = 0.8621420860290527
+DEFAULT_COSINE_THRESHOLD = 0.5066665410995483
