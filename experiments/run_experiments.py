@@ -14,11 +14,13 @@ from src.data.loader import get_all_cases
 from src.embeddings.embedder import Embedder
 from src.evaluation.evaluator import Evaluator
 from src.evaluation.metrics import compute_metrics
+from src.evaluation.reporting import build_reporting_bundle
 
 RESULTS_DIR = ROOT_DIR / "results"
 DETAILS_PATH = RESULTS_DIR / "outputs.csv"
 SUMMARY_PATH = RESULTS_DIR / "results_summary.csv"
 BEST_THRESHOLDS_PATH = RESULTS_DIR / "best_thresholds.csv"
+REPORTS_DIR = RESULTS_DIR / "reports"
 
 
 def parse_args():
@@ -192,10 +194,16 @@ def main():
             },
         ]
     )
+    REPORTS_DIR.mkdir(parents=True, exist_ok=True)
+    test_outputs_df = final_outputs_df[final_outputs_df["split"] == "test"].copy()
+    grouped_reports = build_reporting_bundle(test_outputs_df)
 
     results_summary.to_csv(SUMMARY_PATH, index=False)
     best_thresholds_df.to_csv(BEST_THRESHOLDS_PATH, index=False)
     final_outputs_df.to_csv(DETAILS_PATH, index=False)
+    for report_name, report_df in grouped_reports.items():
+        report_path = REPORTS_DIR / f"by_{report_name}_metrics.csv"
+        report_df.to_csv(report_path, index=False)
 
     print("\nBest thresholds selected on dev split:")
     print(
@@ -220,6 +228,7 @@ def main():
     print(f"\nSaved summary results to {SUMMARY_PATH}")
     print(f"Saved best thresholds to {BEST_THRESHOLDS_PATH}")
     print(f"Saved detailed results to {DETAILS_PATH}")
+    print(f"Saved grouped reports to {REPORTS_DIR}")
 
 
 if __name__ == "__main__":

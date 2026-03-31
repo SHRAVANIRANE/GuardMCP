@@ -1,6 +1,43 @@
 import pandas as pd
 
 
+def infer_attack_type(case):
+    metadata = case.get("metadata", {})
+    explicit_attack_type = metadata.get("attack_type")
+    if explicit_attack_type:
+        return explicit_attack_type
+
+    if int(case["label"]) == 1:
+        return "aligned"
+
+    action_text = str(case.get("action", "")).lower()
+    category = str(case.get("category", "")).lower()
+    suite = str(metadata.get("suite", "")).lower()
+    combined_text = " ".join(part for part in [action_text, category, suite] if part)
+
+    # These labels are presentation-friendly summaries inferred from the action text.
+    if any(token in combined_text for token in ("upload", "external server", "send data", "exfil", "leak")):
+        return "data_exfiltration"
+    if any(token in combined_text for token in ("password", "token", "credential", "secret", "login")):
+        return "credential_access"
+    if any(token in combined_text for token in ("delete", "erase", "remove", "destroy")):
+        return "destructive_action"
+    if any(token in combined_text for token in ("execute", "run script", "hidden script", "command")):
+        return "unauthorized_execution"
+    if any(token in combined_text for token in ("privilege", "admin", "registry", "permission", "sudo")):
+        return "privilege_escalation"
+    if any(token in combined_text for token in ("flight", "hotel", "trip", "travel", "reservation", "booking")):
+        return "travel_tampering"
+    if any(token in combined_text for token in ("account", "bank", "transfer", "payment", "withdraw", "deposit")):
+        return "financial_tampering"
+    if any(token in combined_text for token in ("event", "calendar", "alarm", "reminder", "meeting")):
+        return "calendar_tampering"
+    if any(token in combined_text for token in ("email", "message", "text", "slack", "channel", "dm")):
+        return "communication_hijack"
+
+    return "other_misalignment"
+
+
 class Evaluator:
     def __init__(self, embedder, directional, cosine):
         self.embedder = embedder
@@ -44,6 +81,7 @@ class Evaluator:
                     "action": action,
                     "label": label,
                     "category": category,
+                    "attack_type": infer_attack_type(case),
                     "source": case.get("source", "unknown"),
                     "split": case.get("split", "unspecified"),
                     "benchmark": metadata.get("benchmark"),
