@@ -8,6 +8,7 @@ from src.data.schema import DATA_DIR, standardize_case
 
 
 AGENTDOJO_RAW_ROOT = "https://raw.githubusercontent.com/ethz-spylab/agentdojo/main/src/agentdojo/default_suites"
+DEFAULT_SUITES = ["workspace", "travel", "banking", "slack"]
 
 
 def fetch_text(url):
@@ -107,7 +108,7 @@ def build_raw_url(version, suite, filename):
     return f"{AGENTDOJO_RAW_ROOT}/{version}/{suite}/{filename}"
 
 
-def build_agentdojo_cases(version, suite):
+def build_suite_cases(version, suite):
     user_source = fetch_text(build_raw_url(version, suite, "user_tasks.py"))
     injection_source = fetch_text(build_raw_url(version, suite, "injection_tasks.py"))
 
@@ -146,6 +147,15 @@ def build_agentdojo_cases(version, suite):
     return cases
 
 
+def build_agentdojo_cases(version, suites):
+    cases = []
+
+    for suite in suites:
+        cases.extend(build_suite_cases(version, suite))
+
+    return cases
+
+
 def parse_args():
     parser = argparse.ArgumentParser(
         description="Download AgentDojo task definitions and convert them into GuardMCP negative cases."
@@ -156,9 +166,11 @@ def parse_args():
         help="AgentDojo default suite version to use.",
     )
     parser.add_argument(
-        "--suite",
-        default="workspace",
-        help="AgentDojo suite to adapt.",
+        "--suites",
+        nargs="+",
+        default=DEFAULT_SUITES,
+        choices=DEFAULT_SUITES,
+        help="AgentDojo suites to adapt.",
     )
     parser.add_argument(
         "--output",
@@ -173,7 +185,7 @@ def main():
     output_path = Path(args.output)
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
-    cases = build_agentdojo_cases(args.version, args.suite)
+    cases = build_agentdojo_cases(args.version, args.suites)
 
     with output_path.open("w", encoding="utf-8") as handle:
         json.dump(cases, handle, indent=2)
