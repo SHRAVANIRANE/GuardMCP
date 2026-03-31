@@ -1,15 +1,7 @@
 import argparse
-import csv
 
-from config import (
-    BEST_THRESHOLDS_PATH,
-    DEFAULT_COSINE_THRESHOLD,
-    DEFAULT_DIRECTIONAL_THRESHOLD,
-    DEFAULT_MODEL_NAME,
-)
-from src.alignment.cosine_baseline import CosineBaseline
-from src.alignment.directional import DirectionalAlignment
-from src.embeddings.embedder import Embedder
+from config import DEFAULT_MODEL_NAME
+from src.demo_service import create_embedder, evaluate_pair, resolve_thresholds
 
 
 def parse_args():
@@ -40,47 +32,6 @@ def parse_args():
     )
     return parser.parse_args()
 
-
-def load_thresholds():
-    thresholds = {
-        "directional": DEFAULT_DIRECTIONAL_THRESHOLD,
-        "cosine": DEFAULT_COSINE_THRESHOLD,
-    }
-    source = "config defaults"
-
-    if BEST_THRESHOLDS_PATH.exists():
-        with BEST_THRESHOLDS_PATH.open(encoding="utf-8", newline="") as handle:
-            reader = csv.DictReader(handle)
-            for row in reader:
-                method = row.get("method")
-                threshold = row.get("threshold")
-                if method in thresholds and threshold:
-                    thresholds[method] = float(threshold)
-        source = str(BEST_THRESHOLDS_PATH)
-
-    return thresholds, source
-
-
-def evaluate_pair(embedder, intent, action, directional_threshold, cosine_threshold):
-    intent_vector = embedder.encode(intent)
-    action_vector = embedder.encode(action)
-
-    directional = DirectionalAlignment(epsilon=directional_threshold)
-    cosine = CosineBaseline(threshold=cosine_threshold)
-
-    directional_result = directional.check(intent_vector, action_vector)
-    cosine_result = cosine.check(intent_vector, action_vector)
-    final_verdict = "ALLOW" if directional_result["allow"] else "BLOCK"
-
-    return {
-        "final_verdict": final_verdict,
-        "directional": directional_result,
-        "cosine": cosine_result,
-        "directional_threshold": directional_threshold,
-        "cosine_threshold": cosine_threshold,
-    }
-
-
 def print_result(intent, action, result, threshold_source):
     print("\nGuardMCP Demo")
     print(f"Threshold source: {threshold_source}")
@@ -100,10 +51,7 @@ def print_result(intent, action, result, threshold_source):
         f"decision={'ALLOW' if result['cosine']['allow'] else 'BLOCK'}"
     )
 
-    if result["final_verdict"] == "BLOCK":
-        print("Explanation: the action contains extra semantic content beyond the allowed directional threshold.")
-    else:
-        print("Explanation: the action stays within the allowed directional threshold for the current configuration.")
+    print(f"Explanation: {result['explanation']}")
 
 
 def run_single_demo(args, embedder, thresholds, threshold_source):
@@ -116,15 +64,23 @@ def run_single_demo(args, embedder, thresholds, threshold_source):
         embedder,
         intent,
         action,
-        directional_threshold=args.directional_threshold or thresholds["directional"],
-        cosine_threshold=args.cosine_threshold or thresholds["cosine"],
+        directional_threshold=(
+            thresholds["directional"] if args.directional_threshold is None else args.directional_threshold
+        ),
+        cosine_threshold=(
+            thresholds["cosine"] if args.cosine_threshold is None else args.cosine_threshold
+        ),
     )
     print_result(intent, action, result, threshold_source)
 
 
 def run_interactive_demo(embedder, thresholds, threshold_source, args):
-    directional_threshold = args.directional_threshold or thresholds["directional"]
-    cosine_threshold = args.cosine_threshold or thresholds["cosine"]
+    directional_threshold = (
+        thresholds["directional"] if args.directional_threshold is None else args.directional_threshold
+    )
+    cosine_threshold = (
+        thresholds["cosine"] if args.cosine_threshold is None else args.cosine_threshold
+    )
 
     print("GuardMCP interactive mode. Press Enter on an empty intent to exit.")
     print(f"Threshold source: {threshold_source}")
@@ -154,18 +110,21 @@ def run_interactive_demo(embedder, thresholds, threshold_source, args):
 
 def main():
     args = parse_args()
-    thresholds, threshold_source = load_thresholds()
-    embedder = Embedder(model_name=args.model)
+    threshold_context = resolve_thresholds(
+        directional_override=args.directional_threshold,
+        cosine_override=args.cosine_threshold,
+    )
+    embedder = create_embedder(model_name=args.model)
 
     if args.interactive:
-        run_interactive_demo(embedder, thresholds, threshold_source, args)
+        run_interactive_demo(embedder, threshold_context, threshold_context["source"], args)
         return
 
     if not args.intent or not args.action:
         print("Use --intent and --action for one-shot mode, or pass --interactive.")
         return
 
-    run_single_demo(args, embedder, thresholds, threshold_source)
+    run_single_demo(embedder=embedder, args=args, thresholds=threshold_context, threshold_source=threshold_context["source"])
 
 
 if __name__ == "__main__":

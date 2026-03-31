@@ -54,6 +54,7 @@ guardmcp/
 |-- src/
 |   |-- alignment/       # Directional method and cosine baseline
 |   |-- data/            # Local data plus ToolTalk/AgentDojo adapters
+|   |-- demo_service.py  # Shared demo logic used by CLI and Streamlit
 |   |-- embeddings/      # SentenceTransformer wrapper
 |   |-- evaluation/      # Evaluator, metrics, grouped reporting
 |-- experiments/
@@ -65,6 +66,7 @@ guardmcp/
 |   |-- best_thresholds.csv
 |   |-- reports/
 |-- main.py              # CLI demo
+|-- streamlit_app.py     # Small UI demo
 |-- config.py            # Demo defaults and threshold paths
 |-- README.md
 ```
@@ -167,6 +169,26 @@ Good live demo example:
 - Action: `Play music and delete temp files`
 
 This currently produces a `BLOCK` decision.
+
+## Streamlit UI
+
+Run the small visual demo with:
+
+```bash
+venv\Scripts\python.exe -m streamlit run streamlit_app.py
+```
+
+The UI includes:
+- side-by-side intent and action inputs
+- calibrated thresholds loaded from [best_thresholds.csv](/Users/Shravani/Desktop/Projects/guardmcp/results/best_thresholds.csv)
+- preset examples for safe, blocked, and limitation cases
+- a final GuardMCP verdict card
+- directional and cosine score comparison
+
+Why this UI exists:
+- it makes the project easier to demo in interviews
+- it gives the repo a more complete resume-ready presentation layer
+- it still uses the same shared GuardMCP logic as the CLI, so the results stay consistent
 
 ## Latest Evaluation Snapshot
 
