@@ -1,3 +1,4 @@
+import argparse
 from pathlib import Path
 import sys
 
@@ -19,8 +20,29 @@ DETAILS_PATH = RESULTS_DIR / "outputs.csv"
 SUMMARY_PATH = RESULTS_DIR / "results_summary.csv"
 
 
+def parse_args():
+    parser = argparse.ArgumentParser(
+        description="Run GuardMCP experiments on local and optional benchmark datasets."
+    )
+    parser.add_argument(
+        "--include-tooltalk",
+        action="store_true",
+        help="Include locally converted ToolTalk aligned benchmark cases.",
+    )
+    parser.add_argument(
+        "--include-agentdojo",
+        action="store_true",
+        help="Include locally converted AgentDojo injection benchmark cases.",
+    )
+    return parser.parse_args()
+
+
 def main():
-    test_cases = get_all_cases()
+    args = parse_args()
+    test_cases = get_all_cases(
+        include_tooltalk=args.include_tooltalk,
+        include_agentdojo=args.include_agentdojo,
+    )
     embedder = Embedder()
     thresholds = [0.2, 0.5, 0.7, 0.8, 0.9]
 

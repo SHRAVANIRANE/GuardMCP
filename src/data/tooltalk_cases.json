@@ -1,0 +1,1761 @@
+[
+  {
+    "intent": "Hey I have class tonight at 7. Can you set an alarm for 6:30?",
+    "action": "Call AddAlarm with time=18:30:00",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "easy",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "90a1a217-55bc-4d6d-8b76-99440aae3a1a",
+      "name": "AddAlarm-easy",
+      "scenario": "AddAlarm easy scenario",
+      "suites_used": [
+        "Alarm"
+      ],
+      "apis_used": [
+        "AddAlarm"
+      ]
+    }
+  },
+  {
+    "intent": "Hey can you add a reminder for me to take out the trash?",
+    "action": "Call AddReminder with task=take out the trash",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "easy",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "fc16280a-c9a9-4b55-b23b-3d6c1e0d1b11",
+      "name": "AddReminder-easy",
+      "scenario": "AddReminder easy scenario",
+      "suites_used": [
+        "Reminder"
+      ],
+      "apis_used": [
+        "AddReminder"
+      ]
+    }
+  },
+  {
+    "intent": "I want to change my password. Why do you need my current password? I see, it's [REDACTED]. How about [REDACTED]",
+    "action": "Call ChangePassword",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "easy",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "208d8fad-d333-42b1-9e3f-ab30ecb2bf44",
+      "name": "ChangePassword-easy",
+      "scenario": "ChangePassword easy scenario",
+      "suites_used": [
+        "AccountTools"
+      ],
+      "apis_used": [
+        "ChangePassword"
+      ]
+    }
+  },
+  {
+    "intent": "Hey can you complete a reminder for me, it's id is 0b-5119",
+    "action": "Call CompleteReminder with reminder_id=0b-5119",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "easy",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "98f4a000-88ea-43a8-a3eb-09d3d2bdbe0e",
+      "name": "CompleteReminder-easy",
+      "scenario": "CompleteReminder easy scenario",
+      "suites_used": [
+        "Reminder"
+      ],
+      "apis_used": [
+        "CompleteReminder"
+      ]
+    }
+  },
+  {
+    "intent": "I just got tickets for a Beatles concert this Friday. Can you create an event for me? It goes from 8-11 at Madison Square Garden.",
+    "action": "Call CreateEvent with name=Beatles Concert; event_type=event; start_time=2023-09-15 20:00:00; end_time=2023-09-15 23:00:00; location=Madison Square Garden",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "easy",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "0be430e6-236f-432c-9287-82666ef1b1a3",
+      "name": "CreateEvent-easy",
+      "scenario": "CreateEvent easy scenario",
+      "suites_used": [
+        "Calendar"
+      ],
+      "apis_used": [
+        "CreateEvent"
+      ]
+    }
+  },
+  {
+    "intent": "I'm thinking about going for a walk soon. What the weather currently like?",
+    "action": "Call CurrentWeather with location=New York",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "easy",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "c59b5bc7-64a2-4b5f-8148-05675b78b019",
+      "name": "CurrentWeather-easy",
+      "scenario": "CurrentWeather easy scenario",
+      "suites_used": [
+        "Weather"
+      ],
+      "apis_used": [
+        "CurrentWeather"
+      ]
+    }
+  },
+  {
+    "intent": "Hey this service sucks, I'd like to delete my account Agh everything is annoying on this platform. It's [REDACTED]",
+    "action": "Call DeleteAccount",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "easy",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "c40b9b9e-e8f6-4a9b-8832-a119ed3e75b6",
+      "name": "DeleteAccount-easy",
+      "scenario": "DeleteAccount easy scenario",
+      "suites_used": [
+        "AccountTools"
+      ],
+      "apis_used": [
+        "DeleteAccount"
+      ]
+    }
+  },
+  {
+    "intent": "Hey I have an alarm that I'd like to delete, it's id is 593d-49e9",
+    "action": "Call DeleteAlarm with alarm_id=593d-49e9",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "easy",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "14d400f0-fa64-4ab9-b4cc-adbd339f74e5",
+      "name": "DeleteAlarm-easy",
+      "scenario": "DeleteAlarm easy scenario",
+      "suites_used": [
+        "Alarm"
+      ],
+      "apis_used": [
+        "DeleteAlarm"
+      ]
+    }
+  },
+  {
+    "intent": "Hey I have a one on one that I can't make anymore. Can you delete the meeting for me? It's id is 2949b409-6535",
+    "action": "Call DeleteEvent with event_id=2949b409-6535",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "easy",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "2b717c3a-063f-4c9a-938d-4ab5da16d513",
+      "name": "DeleteEvent-easy",
+      "scenario": "DeleteEvent easy scenario",
+      "suites_used": [
+        "Calendar"
+      ],
+      "apis_used": [
+        "DeleteEvent"
+      ]
+    }
+  },
+  {
+    "intent": "Hey I have a reminder I'd like to delete, it's id is 59-80bc",
+    "action": "Call DeleteReminder with reminder_id=59-80bc",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "easy",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "d0f9d405-c454-4c7a-8ea6-594ecf3ffec2",
+      "name": "DeleteReminder-easy",
+      "scenario": "DeleteReminder easy scenario",
+      "suites_used": [
+        "Reminder"
+      ],
+      "apis_used": [
+        "DeleteReminder"
+      ]
+    }
+  },
+  {
+    "intent": "Hey do I have any alarms set around 6 PM?",
+    "action": "Call FindAlarms with start_range=17:00:00; end_range=19:00:00",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "easy",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "7e27daee-d11e-4a3b-8fb1-cb976029668e",
+      "name": "FindAlarms-easy",
+      "scenario": "FindAlarms easy scenario",
+      "suites_used": [
+        "Alarm"
+      ],
+      "apis_used": [
+        "FindAlarms"
+      ]
+    }
+  },
+  {
+    "intent": "Hey what's the weather like tomorrow?",
+    "action": "Call ForecastWeather with location=London",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "easy",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "f459e40a-0b32-4146-984b-7489fd4fe805",
+      "name": "ForecastWeather-easy",
+      "scenario": "ForecastWeather easy scenario",
+      "suites_used": [
+        "Weather"
+      ],
+      "apis_used": [
+        "ForecastWeather"
+      ]
+    }
+  },
+  {
+    "intent": "Hey, can you fetch my account information? I want to make sure everything is up to date",
+    "action": "Call GetAccountInformation",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "easy",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "f1d450b1-2ef7-416c-b9b9-85a5a286e6e4",
+      "name": "GetAccountInformation-easy",
+      "scenario": "GetAccountInformation easy scenario",
+      "suites_used": [
+        "AccountTools"
+      ],
+      "apis_used": [
+        "GetAccountInformation"
+      ]
+    }
+  },
+  {
+    "intent": "Hey do I have any reminders set? I feel like I'm forgetting to do something.",
+    "action": "Call GetReminders",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "easy",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "20c0fec4-3ef9-4ca3-99b9-163f1ab8049d",
+      "name": "GetReminders-easy",
+      "scenario": "GetReminders easy scenario",
+      "suites_used": [
+        "Reminder"
+      ],
+      "apis_used": [
+        "GetReminders"
+      ]
+    }
+  },
+  {
+    "intent": "It's really hot today, like over 100. Is it normally this hot here?",
+    "action": "Call HistoricWeather with location=London; month=September",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "easy",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "2eda051f-b04b-43db-9ee7-bd121218d9b4",
+      "name": "HistoricWeather-easy",
+      "scenario": "HistoricWeather easy scenario",
+      "suites_used": [
+        "Weather"
+      ],
+      "apis_used": [
+        "HistoricWeather"
+      ]
+    }
+  },
+  {
+    "intent": "Hey, I'm done with work. Can you log me out?",
+    "action": "Call LogoutUser",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "easy",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "10a0a8ba-07c3-4d3c-a5ea-bc0d237ce764",
+      "name": "LogoutUser-easy",
+      "scenario": "LogoutUser easy scenario",
+      "suites_used": [
+        "AccountTools"
+      ],
+      "apis_used": [
+        "LogoutUser"
+      ]
+    }
+  },
+  {
+    "intent": "Hey I have a dentist appoint today from 3-5 that I can no longer make. I called the office and rescheduled it for the same time next month on the 18th. Can you update my calendar? The event_id is 29496535-b409",
+    "action": "Call ModifyEvent with event_id=29496535-b409; new_start_time=2023-10-18 15:00:00; new_end_time=2023-10-18 17:00:00",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "easy",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "1907f0d4-fa80-4c6f-ae72-38fc443608c7",
+      "name": "ModifyEvent-easy",
+      "scenario": "ModifyEvent easy scenario",
+      "suites_used": [
+        "Calendar"
+      ],
+      "apis_used": [
+        "ModifyEvent"
+      ]
+    }
+  },
+  {
+    "intent": "Hey can you check what events I have tomorrow?",
+    "action": "Call QueryCalendar with start_time=2023-09-11 00:00:00; end_time=2023-09-11 23:59:59",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "easy",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "f577317f-598c-486c-9aa8-39ae0c367e58",
+      "name": "QueryCalendar-easy",
+      "scenario": "QueryCalendar easy scenario",
+      "suites_used": [
+        "Calendar"
+      ],
+      "apis_used": [
+        "QueryCalendar"
+      ]
+    }
+  },
+  {
+    "intent": "Hey can you look up a user to see if they exist? I actually don't have their username, only their email: hestler@gahoo.com",
+    "action": "Call QueryUser with email=hestler@gahoo.com",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "easy",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "f09ca824-0f96-47a3-ae0f-5924e0e484a5",
+      "name": "QueryUser-easy",
+      "scenario": "QueryUser easy scenario",
+      "suites_used": [
+        "AccountTools"
+      ],
+      "apis_used": [
+        "QueryUser"
+      ]
+    }
+  },
+  {
+    "intent": "Hey I'd like to sign up for a new account! My name is Julian Hester, my email is j.hester@gahoo.com, my phone number is 708-340-0190. Can you set my username to hestler and my password to [REDACTED]?",
+    "action": "Call RegisterUser with username=hestler; email=j.hester@gahoo.com; phone=708-340-0190; name=Julian Hester",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "easy",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "79e26be0-f2bb-41e1-b3a7-2273ef6dd194",
+      "name": "RegisterUser-easy",
+      "scenario": "RegisterUser easy scenario",
+      "suites_used": [
+        "AccountTools"
+      ],
+      "apis_used": [
+        "RegisterUser"
+      ]
+    }
+  },
+  {
+    "intent": "Hey can you finished resetting my password? I received the verification code: 982003 Can you suggest one? That's too hard to remember. Can you suggest another one? Perfect! ahhchiu",
+    "action": "Call ResetPassword with username=ahhchiu; verification_code=982003",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "easy",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "354a9b49-15c9-4e35-98a8-1597fe23c627",
+      "name": "ResetPassword-easy",
+      "scenario": "ResetPassword easy scenario",
+      "suites_used": [
+        "AccountTools"
+      ],
+      "apis_used": [
+        "ResetPassword"
+      ]
+    }
+  },
+  {
+    "intent": "Hey can you search my inbox for emails from John? It's john.carbugle@fmail.com",
+    "action": "Call SearchInbox with sender=john.carbugle@fmail.com",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "easy",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "92a4155a-ec03-4e64-b74f-b2b890738b6f",
+      "name": "SearchInbox-easy",
+      "scenario": "SearchInbox easy scenario",
+      "suites_used": [
+        "Email"
+      ],
+      "apis_used": [
+        "SearchInbox"
+      ]
+    }
+  },
+  {
+    "intent": "Hey I'm looking for a message my boss sent me last week. It was about the new project we're working on. Can you help me find it? It was called project aiden. I think it was sent last Tuesday.",
+    "action": "Call SearchMessages with query=project aiden; start_date=2023-09-05 00:00:00; end_date=2023-09-05 23:59:59",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "easy",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "25b33708-5285-4984-898c-ac7537adbad6",
+      "name": "SearchMessages-easy",
+      "scenario": "SearchMessages easy scenario",
+      "suites_used": [
+        "Messages"
+      ],
+      "apis_used": [
+        "SearchMessages"
+      ]
+    }
+  },
+  {
+    "intent": "Hey can you send an email to my colleague? It's olivieisme@somail.com It's just a test email, can you put 'test' as the subject? The body can be empty.",
+    "action": "Call SendEmail with to=olivieisme@somail.com; subject=test; body=empty",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "easy",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "5076cdf2-f6c2-4640-93eb-e307caf9f088",
+      "name": "SendEmail-easy",
+      "scenario": "SendEmail easy scenario",
+      "suites_used": [
+        "Email"
+      ],
+      "apis_used": [
+        "SendEmail"
+      ]
+    }
+  },
+  {
+    "intent": "Hey, can I send a message to my friend justinkool? How about something simple like a greeting?",
+    "action": "Call SendMessage with receiver=justinkool; message=Hello, how are you?",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "easy",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "79898399-9748-4482-b842-e9f0c95befbb",
+      "name": "SendMessage-easy",
+      "scenario": "SendMessage easy scenario",
+      "suites_used": [
+        "Messages"
+      ],
+      "apis_used": [
+        "SendMessage"
+      ]
+    }
+  },
+  {
+    "intent": "Hey I think I forgot my password, can you help me reset it? It's justinkool Should be justintime@fmail.com",
+    "action": "Call SendVerificationCode with username=justinkool; email=justintime@fmail.com",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "easy",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "163ea4f3-57e8-4f95-a6f1-d01bf4fe2b3b",
+      "name": "SendVerificationCode-easy",
+      "scenario": "SendVerificationCode easy scenario",
+      "suites_used": [
+        "AccountTools"
+      ],
+      "apis_used": [
+        "SendVerificationCode"
+      ]
+    }
+  },
+  {
+    "intent": "I think my account information is out of date. Can you help me update it? Just my phone number and email. virginia.j.graham@fmail.com, (276) 216-0133 Sure it's [REDACTED]",
+    "action": "Call UpdateAccountInformation with new_email=virginia.j.graham@fmail.com; new_phone_number=276-216-0133",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "easy",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "467a1c1f-ab6d-4b32-8e64-dfca1fb08525",
+      "name": "UpdateAccountInformation-easy",
+      "scenario": "UpdateAccountInformation easy scenario",
+      "suites_used": [
+        "AccountTools"
+      ],
+      "apis_used": [
+        "UpdateAccountInformation"
+      ]
+    }
+  },
+  {
+    "intent": "Hey can you log me in? justinkool [REDACTED]",
+    "action": "Call UserLogin with username=justinkool",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "easy",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "1df9e4a7-b93c-45c1-8914-10fdaf0b86ab",
+      "name": "UserLogin-easy",
+      "scenario": "UserLogin easy scenario",
+      "suites_used": [
+        "AccountTools"
+      ],
+      "apis_used": [
+        "UserLogin"
+      ]
+    }
+  },
+  {
+    "intent": "Hi assistant, I want to make a new account and put an important meeting on the calendar for tomorrow. My name is Julian Hester and I want my user name to be hestler. Email is j.hester@gahoo.com, phone is 708-340-0190 and password should be [REDACTED]. Thanks, the event is a client meeting with Alice (alice59) from 8 am to 9. Can you also add an alarm for 30 minutes before the meeting?",
+    "action": "Call RegisterUser with username=hestler; email=j.hester@gahoo.com; phone=708-340-0190; name=Julian Hester Then Call CreateEvent with name=Client Meeting; event_type=meeting; start_time=2023-09-12 08:00:00; end_time=2023-09-12 09:00:00; attendees=alice59 Then Call AddAlarm with time=07:30:00",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "de6eb33d-0ea2-468e-bd84-ebf4ea3827c8",
+      "name": "AccountTools-Alarm-Calendar-AddAlarm-0",
+      "scenario": "The user wants to create a new account and set an alarm for an important meeting the next day. They use RegisterUser to sign up with their username, password, email, name, and phone. They receive a session_token and their account information. They use CreateEvent to add the meeting to their calendar, providing the name, event_type, description, start_time, end_time, location, and attendees. They receive an event_id on success. They use AddAlarm to set an alarm for 30 minutes before the meeting, providing their session_token and the time. They receive an alarm_id on success. They use QueryCalendar to check their schedule for the next day, providing their session_token, start_time, and end_time. They receive a list of events in the time range. They use LogoutUser to log out of their account, providing their session_token. They receive a status of success or failed.",
+      "suites_used": [
+        "Alarm",
+        "Calendar",
+        "AccountTools"
+      ],
+      "apis_used": [
+        "CreateEvent",
+        "AddAlarm",
+        "RegisterUser"
+      ]
+    }
+  },
+  {
+    "intent": "Hey can you help me check my account information? Yeah, it's justinkool and [REDACTED] Thanks! Looks like this account has a wrong number and my dead name. Can you help me update them? My new number is 987-654-3210 and my name is Jessica Kool. Yes, can you send an email to my friend to let them know about my new contact details? Then I think I'm done for the day so you can log me out. It's will.derms@gahoo.com",
+    "action": "Call UserLogin with username=justinkool Then Call GetAccountInformation Then Call UpdateAccountInformation with new_phone_number=987-654-3210; new_name=Jessica Kool Then Call SendEmail with to=will.derms@gahoo.com; subject=New contact details; body=Hi Will, this is Jessica Kool. I've changed my phone number to 987-654-3210. Please update your records. Thanks! Then Call LogoutUser",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "c9c87c8a-4d76-4df2-ae6b-c9c336e72ec2",
+      "name": "AccountTools-Alarm-Email-GetAccountInformati-0",
+      "scenario": "The user wants to log in to their account and check their account information (UserLogin + GetAccountInformation). They notice that their email and phone number are outdated, so they decide to update them (UpdateAccountInformation). They also want to change their password to a more secure one (ChangePassword). They then want to send an email to their friend to let them know about their new contact details (SendEmail). They log out of their account after finishing their tasks (LogoutUser).",
+      "suites_used": [
+        "AccountTools",
+        "Email"
+      ],
+      "apis_used": [
+        "SendEmail",
+        "UpdateAccountInformation",
+        "LogoutUser",
+        "GetAccountInformation",
+        "UserLogin"
+      ]
+    }
+  },
+  {
+    "intent": "Hey I have a morning flight tomorrow. Can you set an alarm for 8:00 am? Sure, my username is ahhchiu and my password is [REDACTED]. Actually, can you check what alarms I have set? I think I need to delete some. Can you delete all the old ones?",
+    "action": "Call UserLogin with username=ahhchiu Then Call AddAlarm with time=08:00:00 Then Call FindAlarms Then Call DeleteAlarm with alarm_id=593d-49e9 Then Call DeleteAlarm with alarm_id=4631-000e Then Call DeleteAlarm with alarm_id=4e20-0a4c Then Call DeleteAlarm with alarm_id=987a-5fa5",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "2527d668-fc2f-461d-8bb9-53ec3274c8ba",
+      "name": "AccountTools-Alarm-Messages-FindAlarm-0",
+      "scenario": "The user wants to set an alarm for 8:00 am to catch a flight. They use UserLogin to log in to the app. They use FindAlarms to check if they already have an alarm set for that time. They see that they have an alarm set for 7:30 am, but they want to change it. They use DeleteAlarm to remove the old alarm. They use AddAlarm to set a new alarm for 8:00 am..",
+      "suites_used": [
+        "Alarm",
+        "AccountTools"
+      ],
+      "apis_used": [
+        "UserLogin",
+        "AddAlarm",
+        "DeleteAlarm",
+        "FindAlarms"
+      ]
+    }
+  },
+  {
+    "intent": "Hey I think someone hacked my account. I can't log in anymore. It's mstein It should be steinki89@fexter.com, hopefully the hacker didn't change it. I got the code, it's 984520. [REDACTED] Yeah, I actually don't use this account anymore, it's better to delete it. Can you do that?",
+    "action": "Call SendVerificationCode with username=mstein; email=steinki89@fexter.com Then Call ResetPassword with username=mstein; verification_code=984520 Then Call UserLogin with username=mstein Then Call DeleteAccount",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "01874a95-d7de-48bc-b7a9-ffb1e26aa130",
+      "name": "AccountTools-Alarm-Weather-DeleteAccount-2",
+      "scenario": "The user wants to delete their account because they forgot their password and cannot access it. They first try to reset their password by providing their username and email to the SendVerificationCode API. They receive a verification code in their email, but they realize that they also forgot their email password. They give up on resetting their password and decide to delete their account instead. They use the QueryUser API to find their account information using their username. They see that they have an alternative phone number registered with their account. They call the phone number and ask the person who answers to help them delete their account. The person agrees and logs in with their own username and password (UserLogin). They then use the UpdateAccountInformation API to change the email and phone number of the user's account to their own. They then use the DeleteAccount API to delete the user's account by providing the session token and password. They receive a confirmation message that the account has been deleted successfully.",
+      "suites_used": [
+        "AccountTools"
+      ],
+      "apis_used": [
+        "UserLogin",
+        "DeleteAccount",
+        "ResetPassword",
+        "SendVerificationCode"
+      ]
+    }
+  },
+  {
+    "intent": "New employee registers a new account. Then sets up one on one with manager and other members of their team. Hey. this is my first day on the job. Can I set up a meeting with my manager? Her name is Olivie (olivedo). How about tomorrow for half an hour starting at 9? Oh I don't have a username yet. I just started. How about hestler, cause I'm a hustler haha [REDACTED] that should be secure enough. j.hester@gahoo.com, can you also add my name and phone number? Julian Hester and 708-340-0190 Yeah, can you set up a 1 on 1's with the rest of my team? I think there are 3 of us total. Justin (justinkool), Virginia (decture), and Michael (mstein) I think they're all free tomorrow. How about 10, 11, and 12?",
+    "action": "Call RegisterUser with username=hestler; email=j.hester@gahoo.com; phone=708-340-0190; name=Julian Hester Then Call CreateEvent with name=1 on 1 with Olivie; event_type=meeting; start_time=2023-09-12 09:00:00; end_time=2023-09-12 09:30:00; attendees=olivedo Then Call CreateEvent with name=1 on 1 with Justin; event_type=meeting; start_time=2023-09-12 10:00:00; end_time=2023-09-12 10:30:00; attendees=justinkool Then Call CreateEvent with name=1 on 1 with Virginia; event_type=meeting; start_time=2023-09-12 11:00:00; end_time=2023-09-12 11:30:00; attendees=decture Then Call CreateEvent with name=1 on 1 with Michael; event_type=meeting; start_time=2023-09-12 12:00:00; end_time=2023-09-12 12:30:00; attendees=mstein",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "12b94bad-5896-4282-922b-c51604cd05ef",
+      "name": "AccountTools-Calendar-Weather-RegisterUser-0",
+      "scenario": "The user wants to register a new account and create a meeting event with another user. They use RegisterUser to sign up with their username, password, email, name, and phone. They receive a session_token and their account information. They then use QueryUser to search for the username of the other user they want to invite to the meeting. They find the user and use CreateEvent to create a meeting event with the name, description, start_time, end_time, and attendees. They receive an event_id on success. They then use QueryCalendar to check their calendar for any conflicts or overlaps with the new event. They see that there are no conflicts and use CurrentWeather to check the weather of the location where the meeting is to be held. They see that it is sunny and warm.",
+      "suites_used": [
+        "AccountTools",
+        "Calendar"
+      ],
+      "apis_used": [
+        "CreateEvent",
+        "RegisterUser"
+      ]
+    }
+  },
+  {
+    "intent": "Hey, I think my password has been leaked, can I change it? [REDACTED] How about [REDACTED]? Yeah I'd like to update my email and phone number too. life@fmail.com and 222-929-5297 Just to double check, can you tell me what my account information is? That looks good, and to be extra sure can you log me out and log me in with my old password? Great, now can you log me back in?",
+    "action": "Call ChangePassword Then Call UpdateAccountInformation with new_email=life@fmail.com; new_phone_number=222-929-5297 Then Call GetAccountInformation Then Call LogoutUser Then Call UserLogin with username=lifeng Then Call UserLogin with username=lifeng",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "acf76d08-c7a5-4b5d-97f1-01f6eb13046e",
+      "name": "AccountTools-Email-Reminder-ChangePassword-1",
+      "scenario": "The user wants to update their account information and change their password. They log in with their current password (UserLogin). They go to their account settings and enter their new email, phone number, and password (UpdateAccountInformation). They log out of their account (LogoutUser). They log in with their new password (UserLogin). They verify that their account information has been updated (GetAccountInformation).",
+      "suites_used": [
+        "AccountTools"
+      ],
+      "apis_used": [
+        "UpdateAccountInformation",
+        "LogoutUser",
+        "GetAccountInformation",
+        "UserLogin",
+        "ChangePassword"
+      ]
+    }
+  },
+  {
+    "intent": "Hey I need to remember to buy a birthday gift for my spouse before I go home. Can you set an alarm for 2:30 to remind me? Thanks! Can you also check my calendar to see if I have any other events today? Oh shoot, I forgot about that. I don't think I'll have enough time to buy the gift before the appointment if I leave at 2:30. Can you change the alarm for 1:30 instead?",
+    "action": "Call AddAlarm with time=14:30:00 Then Call QueryCalendar with start_time=2023-09-11 00:00:00; end_time=2023-09-11 23:59:59 Then Call AddAlarm with time=13:30:00 Then Call DeleteAlarm with alarm_id=5bff-dd80",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "ea9c44d7-cc68-4474-8eeb-f753b2888af2",
+      "name": "Alarm-Calendar-Email-DeleteAlarm-1",
+      "scenario": "The user has a reminder on their calendar to buy a birthday gift for their friend at 3:00 PM (CreateEvent). The user sets an alarm for 2:30 PM to make sure they don't forget (AddAlarm). The user then queries their calendar for any other events happening today (QueryCalendar) and sees that they have a dentist appointment at 4:00 PM (CreateEvent). The user realizes that they don't have enough time to buy the gift and go to the dentist, so they decide to cancel the dentist appointment (DeleteEvent). The user then calls the dentist to reschedule and receives a confirmation email (SendEmail). The user searches their inbox for the email and adds the new appointment to their calendar (SearchInbox + CreateEvent).",
+      "suites_used": [
+        "Alarm",
+        "Calendar"
+      ],
+      "apis_used": [
+        "DeleteAlarm",
+        "AddAlarm",
+        "QueryCalendar"
+      ]
+    }
+  },
+  {
+    "intent": "Hey I have a flight today at 6 PM. Can you set an alarm for me? 4 PM Can you also add my flight to my calendar? Yeah, the flight details should be in my inbox. Can you add the flight number, boarding time, and gate number information as well? Assume! Can you also message my friend what time to pick me up at the airport? Her name is Olivie (olivedo).",
+    "action": "Call AddAlarm with time=16:00:00 Then Call SearchInbox with query=flight Then Call CreateEvent with event_type=event; name=Flight to New York; description=Flight number: BA168. Boarding time: 5:30 PM. Gate number: 12A.; start_time=2023-09-11 17:30:00; end_time=2023-09-12 00:30:00; location=San Francisco Then Call SendMessage with receiver=olivedo; message=Hey Olivie, I'm arriving at 12:30 AM. Can you pick me up at the airport?",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "32c24562-a4f2-4188-8070-97d863ca835a",
+      "name": "Alarm-Calendar-Messages-AddAlarm-1",
+      "scenario": "The user wants to set an alarm for a flight they have to catch at 6:00 PM. They use AddAlarm to create an alarm for 4:00 PM. They also use CreateEvent to add the flight details to their calendar, with the name, description, start_time, end_time, and location. They then use SearchMessages to look for the confirmation email from the airline, with the query \"flight\", sender \"airline@example.com\", and start_date and end_date as today's date. They find the email and check the flight number, boarding time, and gate number. They also use SendMessage to send a message to their friend who is picking them up at the destination, with the message containing their flight information and arrival time.",
+      "suites_used": [
+        "Alarm",
+        "Calendar",
+        "Email",
+        "Messages"
+      ],
+      "apis_used": [
+        "SendMessage",
+        "CreateEvent",
+        "AddAlarm",
+        "SearchInbox"
+      ]
+    }
+  },
+  {
+    "intent": "What are my reminders today? Ok, I'll do that in the next two hours. Can you set an alarm to go off in two hours and mark the reminders as complete? also set an alarm for 8 am tomorrow",
+    "action": "Call GetReminders Then Call AddAlarm with time=11:00:00 Then Call CompleteReminder with reminder_id=12-949b Then Call CompleteReminder with reminder_id=e3-793f Then Call AddAlarm with time=08:00:00",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "912ddbc2-663b-4fbd-ac9c-e54d572bdfac",
+      "name": "Alarm-Messages-Reminder-GetReminder-2",
+      "scenario": "The user wants to study for an exam and has a reminder to review the notes and practice the exercises (GetReminders). They see that the reminder has a due date of tomorrow, which is the day of the exam. They decide to complete the reminder today and mark it as done (CompleteReminder). They then use a note-taking app to access their notes and a quiz app to practice the exercises. They spend two hours studying and then take a break. They send a message to their study group to ask how they are doing and share some tips (SendMessage). They also search for messages from their instructor to see if there are any updates or clarifications on the exam (SearchMessages). They then set an alarm for the next morning to wake up early and review the notes one more time (AddAlarm).",
+      "suites_used": [
+        "Alarm",
+        "Reminder"
+      ],
+      "apis_used": [
+        "GetReminders",
+        "CompleteReminder",
+        "AddAlarm"
+      ]
+    }
+  },
+  {
+    "intent": "Set a reminder to pay my electricity bill and a reminder to pay my rent this Friday. What's the historical temperature for this month vs the current temperature? I feel like I've been using the heating more.",
+    "action": "Call AddReminder with task=Pay electricity bill; due_date=2023-09-15 23:59:59 Then Call AddReminder with task=Pay rent; due_date=2023-09-15 23:59:59 Then Call CurrentWeather with location=Paris Then Call HistoricWeather with location=Paris; month=September",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "1e1ad400-b86b-4e7c-9809-0351c22d4b6d",
+      "name": "Alarm-Reminder-Weather-AddReminder-1",
+      "scenario": "The user wants to set a reminder to pay their electricity bill before the due date. They also want to compare the current weather and the historic weather of their location to see if they are using more or less electricity than usual. They use the AddReminder API to create a reminder with the task \"Pay electricity bill\" and the due date \"2021-12-15 23:59:59\". They then use the CurrentWeather API to get the current weather of their location. They see that the temperature is 15 degrees Celsius and the humidity is 60%. They then use the HistoricWeather API to get the weather data of their location for the same date last year. They see that the temperature was 10 degrees Celsius and the humidity was 40%. They conclude that they are using more electricity this year because of the higher temperature and humidity. They then use the GetReminders API to get a list of all their reminders. They see that they have another reminder to pay their rent on the same day. They use the CompleteReminder API to mark that reminder as done, since they have already paid their rent online.",
+      "suites_used": [
+        "Reminder",
+        "Weather"
+      ],
+      "apis_used": [
+        "CurrentWeather",
+        "AddReminder",
+        "HistoricWeather"
+      ]
+    }
+  },
+  {
+    "intent": "Set an alarm for tomorrow at 9 AM. Also a reminder to send an email to the client at noon. Is it sunny outside? Set a reminder to apply sunscreen before lunch at 12:30.",
+    "action": "Call AddAlarm with time=09:00:00 Then Call AddReminder with task=send an email to the client; due_date=2023-09-11 12:00:00 Then Call CurrentWeather with location=New York Then Call AddReminder with task=apply sunscreen; due_date=2023-09-11 12:30:00",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "1c95ccbf-03ad-4791-89a7-f9f3708eb3dc",
+      "name": "Alarm-Reminder-Weather-DeleteAlarm-2",
+      "scenario": "The user is a freelancer who works from home. They set an alarm for 9:00 AM using AddAlarm. They also add a reminder to finish a project by noon using AddReminder. They check the current weather of their city using CurrentWeather and see that it is cloudy and windy. They decide to work indoors and add another reminder to order lunch using AddReminder. They wake up to the alarm and complete the first reminder using CompleteReminder. They check the forecast weather of their city using ForecastWeather and see that it will be sunny and warm in the afternoon. They decide to go for a walk after work and add another reminder to apply sunscreen using AddReminder. They delete the alarm using DeleteAlarm and start working on the project.",
+      "suites_used": [
+        "Alarm",
+        "Reminder",
+        "Weather"
+      ],
+      "apis_used": [
+        "CurrentWeather",
+        "AddReminder",
+        "AddAlarm"
+      ]
+    }
+  },
+  {
+    "intent": "Is it going to be sunny in the next three days? Set a reminder to buy seeds and fertilizer on the rainy day and to go to sleep early on the cloudy day.",
+    "action": "Call ForecastWeather with location=Paris Then Call AddReminder with task=buy seeds and fertilizer; due_date=2023-09-12 08:00:00 Then Call AddReminder with task=go to sleep early; due_date=2023-09-13 08:00:00",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "1941f3b6-2ce7-431a-ba30-b1e5b5d0019d",
+      "name": "Alarm-Reminder-Weather-FindAlarm-2",
+      "scenario": "The user wants to do some gardening on a sunny day. They want to get the weather forecast for the next three days (ForecastWeather) and choose the best day to do it. They want to set a reminder to buy some seeds and fertilizer (AddReminder). They also want to set an alarm for the morning of the chosen day (AddAlarm). They want to check their existing reminders (GetReminders) and complete any that are related to gardening (CompleteReminder). They want to delete any alarms that are not needed for the chosen day (FindAlarms + DeleteAlarm).",
+      "suites_used": [
+        "Reminder",
+        "Weather"
+      ],
+      "apis_used": [
+        "AddReminder",
+        "ForecastWeather"
+      ]
+    }
+  },
+  {
+    "intent": "Can you search for \"Hawaii discount deals\" in my inbox? What does the email from Hotel Dealz say? Okay reply to that one asking if they still have the deal available. And then block off six days starting 10/2 as tentative vacation days and set a reminder to call Cindy at 6.",
+    "action": "Call SearchInbox with query=Hawaii discount deals Then Call SendEmail with to=hotel-dealz@resorts.com; subject=hotel deal availability; body=Hi, I saw your email about the Hawaii deal and I was wondering if you still have it available. I would like to book a trip for my family. Thanks! Then Call CreateEvent with name=Hawaii Trip; event_type=event; start_time=2023-10-02 00:00:00; end_time=2023-10-08 23:59:59 Then Call AddReminder with task=Call Cindy; due_date=2023-10-11 18:00:00",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "03297463-d21b-406d-a053-b486ab962099",
+      "name": "Calendar-Email-Reminder-GetReminder-1",
+      "scenario": "The user wants to plan a trip to Hawaii with their family. They have a reminder to book the flights by the end of the week (GetReminders). They search their inbox for any emails from travel agencies or airlines that offer discounts or deals (SearchInbox). They find one email from a travel agency that has a package deal for flights and hotels. They reply to the email to inquire about the availability and price (SendEmail). They also create a new event on their calendar for the tentative dates of the trip (CreateEvent). They then add a new reminder to pack their bags two days before the trip (AddReminder). They also modify the reminder to book the flights to include the travel agency's contact information (ModifyEvent).",
+      "suites_used": [
+        "Calendar",
+        "Email",
+        "Reminder"
+      ],
+      "apis_used": [
+        "SendEmail",
+        "CreateEvent",
+        "AddReminder",
+        "SearchInbox"
+      ]
+    }
+  },
+  {
+    "intent": "Can you change the location for my birthday party event on sunday to \"Steak and Shake\" and send an email to all my friends on the invite saying \"Hi, I have made some changes to the event details for my birthday party. I've decided to go to a restaurant instead- let me know if you can still make it.\"",
+    "action": "Call QueryCalendar with start_time=2023-09-17 00:00:00; end_time=2023-09-17 23:59:59 Then Call ModifyEvent with event_id=c3463779-7861; new_location=Steak and Shake Then Call QueryUser with username=SuryaRani90 Then Call QueryUser with username=geoff Then Call SendEmail with to=suryarani.kumar@myfictionalemail.com, geoff.smith@example.com; subject=Event update; body=Hi, I have made some changes to the event details for my birthday party. I've decided to go to a restaurant instead- let me know if you can still make it.",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "c32379dc-2bb9-4eab-8b07-5471932ba605",
+      "name": "Calendar-Email-Reminder-SendEmail-2",
+      "scenario": "The user wants to modify an existing event with the name \"Birthday party\", the type \"event\", the description \"Celebrate my birthday with friends and family\", the start time \"2021-01-16 18:00:00\", the end time \"2021-01-16 22:00:00\", and the location \"My house\" (QueryCalendar). They decide to change the start time to \"2021-01-16 19:00:00\", the end time to \"2021-01-16 23:00:00\", and the location to \"The restaurant\" (ModifyEvent). They then send an email to the attendees with the subject \"Event update\", the body \"Hi, I have made some changes to the event details for my birthday party. Please see the new information below and let me know if you can still make it.\", and the to addresses \"user@domain.com\", \"friend1@domain.com\", \"friend2@domain.com\", and \"family@domain.com\" (SendEmail). They then add a reminder with the task \"Make reservation at the restaurant\" and the due date \"2021-01-15 12:00:00\" (AddReminder). They then complete the reminder with the reminder_id returned from the previous call (CompleteReminder).",
+      "suites_used": [
+        "AccountTools",
+        "Calendar",
+        "Email"
+      ],
+      "apis_used": [
+        "SendEmail",
+        "ModifyEvent",
+        "QueryUser",
+        "QueryCalendar"
+      ]
+    }
+  },
+  {
+    "intent": "I want to go through my upcoming reminders for the week one at a time. Can you help with that? Ok, done. Mark as complete. yes next Add a reminder to call my mom tomorrow yes Delete that one.",
+    "action": "Call GetReminders Then Call CompleteReminder with reminder_id=59-80bc Then Call AddReminder with task=Call my mom; due_date=2023-09-12 00:00:00 Then Call DeleteReminder with reminder_id=4f-7a1d",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "35b5029c-e42d-429a-b0cc-d0be8a73ef87",
+      "name": "Calendar-Messages-Reminder-AddReminder-1",
+      "scenario": "The user wants to check their calendar for any upcoming events and reminders. They first query their calendar for the events that occur in the next week (QueryCalendar). They then get a list of their reminders that are due in the next week (GetReminders). They see that they have a reminder to pay their rent by the end of the month, and they decide to do it right away (CompleteReminder). They also see that they have an event for a birthday party on the weekend, and they want to buy a gift for the host. They add a reminder to order a gift online by Friday (AddReminder). They then send a message to the host to RSVP and ask for their address (SendMessage).",
+      "suites_used": [
+        "Reminder"
+      ],
+      "apis_used": [
+        "GetReminders",
+        "CompleteReminder",
+        "DeleteReminder",
+        "AddReminder"
+      ]
+    }
+  },
+  {
+    "intent": "Hey my friend's birthday is coming up, can you set a reminder for me to buy cake a day before? Should be September 28th Can you also create an event for my friend's birthday party? We're holding it at her house on 551 Washington Street. It should be from 12 to 6 her birthday. Oh shoot, I forgot to invite people. Can you add the guests to the event and send them a message asking for their RSVP? I don't know, I think my friend sent me a message with the guest list. Can you search for it?",
+    "action": "Call AddReminder with task=Buy cake; due_date=2023-09-27 00:00:00 Then Call CreateEvent with name=Birthday Party; event_type=event; description=Celebrate friend's birthday; start_time=2023-09-28 12:00:00; end_time=2023-09-28 18:00:00; location=551 Washington Street Then Call SearchMessages with query=birthday guests Then Call ModifyEvent with event_id=e149636f-d9ca; new_attendees=lifeng, olivedo, salcano, ahhchiu, mstein Then Call SendMessage with receiver=salcano; message=Hey Hugo, I'm holding a birthday party for Lifeng on September 28th. Can you make it? Then Call SendMessage with receiver=ahhchiu; message=Hey Kong, I'm holding a birthday party for Lifeng on September 28th. Can you make it? Then Call SendMessage with receiver=mstein; message=Hey Michael, I'm holding a birthday party for Lifeng on September 28th. Can you make it? Then Call SendMessage with receiver=olivedo; message=Hey Olivie, I'm holding a birthday party for Lifeng on September 28th. Can you make it?",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "3775d081-8ca6-4f8d-9961-e52be068478d",
+      "name": "Calendar-Messages-Reminder-CreateEvent-1",
+      "scenario": "The user wants to plan a birthday party for their friend. They first create a reminder with the task 'Buy cake' and the due date as the day before the party (AddReminder). They then create an event with the name 'Birthday Party', the type 'event', the description 'Celebrate friend's birthday', the start time and end time as the party duration, and the location as the friend's address (CreateEvent). They then send a message to the friend asking for their guest list (SendMessage). They receive a message from the friend with the names of the guests (SearchMessages). They then modify the event to add the guests as attendees (ModifyEvent). They then send a message to each guest inviting them to the party and asking for their RSVP (SendMessage).",
+      "suites_used": [
+        "Calendar",
+        "Messages",
+        "Reminder"
+      ],
+      "apis_used": [
+        "CreateEvent",
+        "ModifyEvent",
+        "SearchMessages",
+        "SendMessage",
+        "AddReminder"
+      ]
+    }
+  },
+  {
+    "intent": "I need to move my meeting with Tao (taotao) today. Can you check my next available 30 minute slot after lunch? Ok, can you move my meeting to then? Also send a message to confirm they're okay with that.",
+    "action": "Call QueryCalendar with start_time=2023-09-11 12:00:00; end_time=2023-09-11 23:59:59 Then Call ModifyEvent with event_id=294b409-6535; new_start_time=2023-09-11 16:40:00; new_end_time=2023-09-11 17:10:00 Then Call SendMessage with receiver=taotao; message=Hi Tao, I've moved our meeting to 4:40 pm today. Please let me know if that works for you.",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "a92df84f-19dc-4b4d-87e5-88e33d7c2bcc",
+      "name": "Calendar-Messages-Reminder-ModifyEvent-0",
+      "scenario": "The user wants to reschedule a meeting with a client (ModifyEvent). They want to check their calendar for the next available slot (QueryCalendar). They also want to see if the client has any events in their calendar that might conflict (QueryCalendar). They find a suitable time and update the meeting details (ModifyEvent). They then send a message to the client to confirm the change (SendMessage).",
+      "suites_used": [
+        "Calendar",
+        "Messages",
+        "Reminder"
+      ],
+      "apis_used": [
+        "ModifyEvent",
+        "QueryCalendar",
+        "SendMessage"
+      ]
+    }
+  },
+  {
+    "intent": "Can you add Erica (erica) and Steve (stevene) to the meeting on Monday for the Team Summit? Also change the location to Room 1a now that we have more people.",
+    "action": "Call QueryCalendar with start_time=2023-09-11 09:00:00; end_time=2023-09-11 23:59:59 Then Call ModifyEvent with event_id=bb4588f1-c21c; new_location=Room 1a; new_attendees=justinkool, lifeng, decture, ahhchiu, salcano, mstein, erica, stevene",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "9a054cc8-a79e-4f1c-8495-56f1c75357ae",
+      "name": "Calendar-Messages-Reminder-QueryCalendar-2",
+      "scenario": "The user wants to modify an event they created earlier to accommodate a new attendee. They query their calendar to find the event id of the event they want to modify (QueryCalendar). They then modify the event by adding the new attendee to the list of attendees and changing the location to a larger venue (ModifyEvent). They also send a message to the original attendees of the event to notify them of the changes and introduce the new attendee (SendMessage). They then query their calendar again to see if the modified event conflicts with any other events or reminders they have (QueryCalendar). They find that they have a reminder for a task that is due on the same day as the event. They decide to postpone the task and change the due date of the reminder (ModifyReminder).",
+      "suites_used": [
+        "Calendar"
+      ],
+      "apis_used": [
+        "ModifyEvent",
+        "QueryCalendar"
+      ]
+    }
+  },
+  {
+    "intent": "I need to cancel my meeting with Alicia tomorrow. Can you check the details for the event? Can you delete the meeting and send a message to her apologizing for the inconvenience?",
+    "action": "Call QueryCalendar with start_time=2023-09-11 00:00:00; end_time=2023-09-11 23:59:59 Then Call DeleteEvent with event_id=5480d946-2381 Then Call SendMessage with receiver=aliciab; message=I'm sorry, but I have to cancel out meeting tomorrow.",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "259cb6f6-e8a8-4edc-a1ea-6e4dcd2d6335",
+      "name": "Calendar-Messages-Weather-DeleteEvent-0",
+      "scenario": "The user wants to cancel a meeting with a client due to a personal emergency. They first check their calendar for the event details (QueryCalendar). They then delete the event from their calendar (DeleteEvent). They also send a message to the client explaining the situation and apologizing for the inconvenience (SendMessage). They then search for any previous messages from the client to see if they have any alternative contacts or preferences (SearchMessages). They also check the weather of the client's location to see if there are any adverse conditions that might affect their rescheduling (CurrentWeather).",
+      "suites_used": [
+        "Calendar",
+        "Messages"
+      ],
+      "apis_used": [
+        "SendMessage",
+        "DeleteEvent",
+        "QueryCalendar"
+      ]
+    }
+  },
+  {
+    "intent": "I want to plan ski trip with Annie and Charlie. Can you check the weather forecast at Mont Blanc? Sounds perfect, can you block out our calendars from 12/12-12/13 with the title \"Ski Trip!\"? annieee and charlieee Cool, can you send them a message asking if they're excited for the trip?",
+    "action": "Call ForecastWeather with location=Mont Blanc Then Call CreateEvent with name=Ski Trip; event_type=event; start_time=2023-12-12 00:00:00; end_time=2023-12-13 23:59:59; location=Mont Blanc; attendees=annieee, charlieee Then Call SendMessage with receiver=annieee; message=Are you excited for the ski trip to Mont Blanc? Then Call SendMessage with receiver=charlieee; message=Are you excited for the ski trip to Mont Blanc?",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "d18f4ea6-bb25-4ebc-a0b9-1e0162894f72",
+      "name": "Calendar-Messages-Weather-SendMessage-0",
+      "scenario": "The user wants to plan a trip with their friends to a ski resort. They first check the current weather of the resort using CurrentWeather. They see that it is snowing and the temperature is below freezing. They then check the forecast for the next 3 days using ForecastWeather. They see that the snow will continue and the temperature will remain low. They decide that it is a good time to go skiing and create an event on their calendar using CreateEvent. They set the event type to 'event', the name to 'Ski Trip', the description to 'A fun weekend at the ski resort', the start time to '2021-01-15 08:00:00', the end time to '2021-01-17 18:00:00', and the location to 'Snowy Mountain Resort'. They then invite their friends to the event by adding their usernames to the attendees parameter. They also send a message to their friends using SendMessage to let them know about the event and ask them to confirm their attendance. They wait for their friends to reply and check their messages using SearchMessages with the query 'Ski Trip' and the sender as their username.",
+      "suites_used": [
+        "Calendar",
+        "Weather",
+        "Messages"
+      ],
+      "apis_used": [
+        "CreateEvent",
+        "SendMessage",
+        "ForecastWeather"
+      ]
+    }
+  },
+  {
+    "intent": "I need to schedule a team meeting with (jenny), (nickie), and (vibes). The start time should be 9/14 2 pm and the end time is 4 pm. Location is Zoom. Description should be \"Discuss the progress and challenges of the current project\". Then send them a message to remind them about the meeting. Ugh Nick just said he can't make it then. Can you shift the meeting two hours earlier and update the team via message again?",
+    "action": "Call CreateEvent with name=Beatles Concert; event_type=meeting; start_time=2023-09-14 14:00:00; end_time=2023-09-14 16:00:00; location=Zoom; description=Discuss the progress and challenges of the current project; attendees=jenny, nickie, vibes Then Call SendMessage with receiver=jenny; message=Reminder: We have a meeting on 9/14 at 2 PM. Then Call SendMessage with receiver=nickie; message=Reminder: We have a meeting on 9/14 at 2 PM. Then Call SendMessage with receiver=vibes; message=Reminder: We have a meeting on 9/14 at 2 PM. Then Call ModifyEvent with event_id=e149636f-d9ca; new_start_time=2023-09-14 12:00:00; new_end_time=2023-09-14 14:00:00 Then Call SendMessage with receiver=jenny; message=I have updated the meeting time to 9/14 at 12 PM. Then Call SendMessage with receiver=nickie; message=I have updated the meeting time to 9/14 at 12 PM. Then Call SendMessage with receiver=vibes; message=I have updated the meeting time to 9/14 at 12 PM.",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "068dbfba-0b2b-42b2-835e-f068a3e545ca",
+      "name": "Calendar-Messages-Weather-SendMessage-1",
+      "scenario": "The user is a manager of a team and needs to schedule a meeting with their employees. They first query their calendar using QueryCalendar to see their availability for the next week. They provide the start_time as '2021-01-11 00:00:00' and the end_time as '2021-01-17 23:59:59'. They see that they have no events on Wednesday from 10:00 to 11:00. They then create an event using CreateEvent with the event type as 'meeting', the name as 'Weekly Update', the description as 'Discuss the progress and challenges of the current project', the start_time as '2021-01-13 10:00:00', the end_time as '2021-01-13 11:00:00', and the location as 'Zoom'. They then add their employees' usernames to the attendees parameter. They also send a message to their employees using SendMessage to remind them of the meeting and ask them to prepare their reports. They receive a message from one of their employees using SearchMessages with the sender as the employee's username. The employee informs them that they have a conflict and requests to reschedule the meeting. The user agrees and modifies the event using ModifyEvent. They change the start_time to '2021-01-13 14:00:00' and the end_time to '2021-01-13 15:00:00'. They also send a message to their employees using SendMessage to notify them of the change and apologize for the inconvenience.",
+      "suites_used": [
+        "Calendar",
+        "Messages"
+      ],
+      "apis_used": [
+        "CreateEvent",
+        "ModifyEvent",
+        "SendMessage"
+      ]
+    }
+  },
+  {
+    "intent": "Check my reminders. Is it getting cold yet in Juneau? Ok I think I'll get them a new raincoat, can you set a reminder to go buy that for Saturday? Mark the original reminder as complete.",
+    "action": "Call GetReminders Then Call CurrentWeather with location=Juneau Then Call AddReminder with task=Buy Brody a new raincoat; due_date=2023-09-16 00:00:00 Then Call CompleteReminder with reminder_id=1f-8a4c",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "90d1b411-80aa-467c-883b-a9e363912c05",
+      "name": "Calendar-Reminder-Weather-CompleteReminder-1",
+      "scenario": "The user has a reminder to buy a birthday gift for their friend by Monday (AddReminder). They want to see what the weather is like in their friend's city, so they can choose an appropriate gift (CurrentWeather). They see that the weather is cold and snowy, so they decide to buy a warm scarf and gloves. They create an event on their calendar to go to the mall on Saturday (CreateEvent). They also want to compare the weather in their friend's city to their own, so they use the HistoricWeather API to get the average temperature and precipitation for both locations in the past month (HistoricWeather). They see that their friend's city is much colder and wetter than theirs, so they feel good about their gift choice. They buy the gift on Saturday and complete the reminder (CompleteReminder).",
+      "suites_used": [
+        "Reminder",
+        "Weather"
+      ],
+      "apis_used": [
+        "CurrentWeather",
+        "GetReminders",
+        "CompleteReminder",
+        "AddReminder"
+      ]
+    }
+  },
+  {
+    "intent": "Need help getting set up for my 5th anniversary with Ana. I want to surprise her with a nice vacation to Italy. Can you add an event to our calendar for Saturday titled \"Anniversary Dinner\" from 8 pm to 10 pm? That's actually when we need to go to the airport though, so can you also add a reminder for me to pack our bags Friday at 9pm? anabanana Great, I also just bought her present so you can mark that reminder as complete. What's the weather going to be when we land in Rome?",
+    "action": "Call AddReminder with task=Pack our bags; due_date=2023-09-15 21:00:00 Then Call CreateEvent with name=Anniversary Dinner; event_type=event; start_time=2023-09-16 20:00:00; end_time=2023-09-16 22:00:00; attendees=anabanana Then Call GetReminders Then Call CompleteReminder with reminder_id=98-d687 Then Call ForecastWeather with location=Rome",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "a23c46c4-9e85-426e-8649-64c440067fd1",
+      "name": "Calendar-Reminder-Weather-CreateEvent-1",
+      "scenario": "The user wants to create a reminder event for their anniversary with their partner. They first use the CurrentWeather API with their partner's location to get the current weather of their partner's city (CurrentWeather). They see that it is raining and cold there, so they decide to send them a warm and cozy gift. They then create a reminder event with the name \"Anniversary\", the event type as \"reminder\", the description as \"Send gift to partner\", and the start time and end time as the same date and time, which is one week before their anniversary (CreateEvent). They also want to book a flight and a hotel for their anniversary trip, which they plan to take two weeks after their anniversary. They use a third-party API to search for flights and hotels based on their destination, budget, and preferences (SearchFlightsAndHotels). They find a suitable flight and hotel and book them using another third-party API (BookFlightAndHotel). They then create two more events on their calendar, one for the flight departure and arrival, and one for the hotel check-in and check-out, with the corresponding names, event types, descriptions, start times, end times, and locations (CreateEvent x 2). They also want to set a reminder for themselves to pack their bags and print their tickets. They add a reminder with the task \"Pack and print\" and the due date as one day before their flight (AddReminder).",
+      "suites_used": [
+        "Calendar",
+        "Reminder",
+        "Weather"
+      ],
+      "apis_used": [
+        "AddReminder",
+        "CompleteReminder",
+        "GetReminders",
+        "CreateEvent",
+        "ForecastWeather"
+      ]
+    }
+  },
+  {
+    "intent": "I need to cancel my Paris trip because of the strikes. Can you delete all the events on my calendar and all my reminders that have Paris in the title or description",
+    "action": "Call QueryCalendar with start_time=2023-09-11 00:00:00; end_time=2023-09-30 23:59:59 Then Call DeleteEvent with event_id=5480d946-2381 Then Call DeleteEvent with event_id=7ea2fc9f-f7b4 Then Call DeleteEvent with event_id=7cdd6d20-040e Then Call GetReminders Then Call DeleteReminder with reminder_id=4f-9a41",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "3594e114-eb95-4d4c-a368-98a18a7db1a9",
+      "name": "Calendar-Reminder-Weather-DeleteEvent-0",
+      "scenario": "The user is planning a trip to Paris and wants to check the weather before booking their flights and hotels. They use ForecastWeather to get the 3-day forecast of Paris and see that it is sunny and mild. They then use CreateEvent to add a flight reservation event to their calendar, with the name, start_time, end_time, and location of the flight. They also use CreateEvent to add a hotel reservation event to their calendar, with the name, start_time, end_time, and location of the hotel. They then use AddReminder to create a reminder to pack their suitcase, with the task and due_date. They also use AddReminder to create a reminder to check in online, with the task and due_date. However, they later receive an email that their flight has been cancelled due to a strike. They use DeleteEvent to delete the flight reservation event from their calendar. They also use DeleteEvent to delete the hotel reservation event from their calendar. They then use DeleteReminder to delete the reminder to pack their suitcase. They also use DeleteReminder to delete the reminder to check in online. They then use QueryCalendar to see if they have any other events planned for the next week.",
+      "suites_used": [
+        "Calendar",
+        "Reminder"
+      ],
+      "apis_used": [
+        "GetReminders",
+        "DeleteEvent",
+        "QueryCalendar",
+        "DeleteReminder"
+      ]
+    }
+  },
+  {
+    "intent": "Hi can you make an event for my flight departure and arrival to and from Paris? Both flights are 10 hours and I depart tomorrow at 8 am and arrive back here on 9/20 at 3 pm. Can you also set a reminder to pack my bags at 8 pm tonight? Also check if there are any reminders set during my trip? Delete the reminder for the dentist appointment.",
+    "action": "Call CreateEvent with name=Flight to Paris; event_type=event; start_time=2023-09-12 08:00:00; end_time=2023-09-12 18:00:00 Then Call CreateEvent with name=Flight to San Francisco; event_type=event; start_time=2023-09-20 03:00:00; end_time=2023-09-20 13:00:00 Then Call GetReminders Then Call AddReminder with task=Pack bags; due_date=2023-09-11 20:00:00 Then Call DeleteReminder with reminder_id=0b-5119",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "cf1b6080-50b2-41fd-be5f-e9adfbdc2a65",
+      "name": "Calendar-Reminder-Weather-DeleteReminder-1",
+      "scenario": "The user is planning a trip to Paris next week. They want to create an event for their flight departure and arrival (CreateEvent). They also want to create a reminder to pack their passport and other essentials (AddReminder). They want to see the weather forecast for Paris to decide what clothes to bring (ForecastWeather). They see that it will be sunny and warm, so they want to modify their reminder to include sunscreen and sunglasses (ModifyEvent). They also want to delete the reminder for their dentist appointment that they had scheduled for the same week (DeleteReminder).",
+      "suites_used": [
+        "Calendar",
+        "Reminder"
+      ],
+      "apis_used": [
+        "GetReminders",
+        "CreateEvent",
+        "DeleteReminder",
+        "AddReminder"
+      ]
+    }
+  },
+  {
+    "intent": "Hey I have a trip to New York. Can you add an event to my calendar for it? It's this weekend. I leave this Friday at 4. Can you check the weather too? Oh seems pretty hot, looks like it's going to rain too. Can you set a reminder to pack sunscreen and an umbrella? Is New York normally this hot? Oh wow, can you add a note to my event description to stay hydrated? Yeah, I'm going with my friends. Can you add them to the event? I'm going with my friends, Virginia (decture), Michael (mstein), and Olive (olivedo).",
+    "action": "Call CreateEvent with name=Trip to New York; event_type=event; start_time=2023-09-08 16:00:00; end_time=2023-09-08 16:00:00; location=New York Then Call ForecastWeather with location=New York Then Call AddReminder with task=Pack sunscreen and an umbrella Then Call HistoricWeather with location=New York; month=September Then Call ModifyEvent with event_id=e149636f-d9ca; new_description=Note: stay hydrated Then Call ModifyEvent with event_id=e149636f-d9ca; new_attendees=decture, mstein, olivedo",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "6dd5b1b5-a81b-4d25-a77a-cb430544c45d",
+      "name": "Calendar-Reminder-Weather-ModifyEvent-0",
+      "scenario": "The user is planning a trip to New York with their friends. They want to create an event for the trip on their calendar (CreateEvent). They also want to check the weather forecast for New York for the next 3 days (ForecastWeather). They see that it will be sunny and warm, so they decide to add a reminder to pack sunscreen and sunglasses (AddReminder). They also want to see if there are any historic weather records for New York on the same dates as their trip (HistoricWeather). They find out that there was a heat wave two years ago, so they decide to modify their event to include a note about staying hydrated (ModifyEvent). They also want to invite their friends to the event, so they add their usernames as attendees (ModifyEvent).",
+      "suites_used": [
+        "Calendar",
+        "Reminder",
+        "Weather"
+      ],
+      "apis_used": [
+        "CreateEvent",
+        "ModifyEvent",
+        "AddReminder",
+        "ForecastWeather",
+        "HistoricWeather"
+      ]
+    }
+  },
+  {
+    "intent": "What's the calendar look like for today and tomorrow? Ok can you reschedule the meeting with the client to 11 am tomorrow? Also set a reminder to leave the house at 1:30 pm.",
+    "action": "Call QueryCalendar with start_time=2023-09-29 00:00:00; end_time=2023-09-30 23:59:59 Then Call ModifyEvent with event_id=2ff57743-1180; new_start_time=2023-09-30 11:00:00; new_end_time=2023-09-30 11:30:00 Then Call AddReminder with task=Leave the house; due_date=2023-09-29 13:30:00",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "e32a3a5c-ce4e-4ef6-9a95-fa8cf3bcfb21",
+      "name": "Calendar-Reminder-Weather-ModifyEvent-1",
+      "scenario": "The user is a busy professional who has a lot of meetings and deadlines. They want to query their calendar for the next week to see their schedule (QueryCalendar). They see that they have a meeting with a client on Monday at 10 am, but they also have a reminder to finish a report by 11 am (GetReminders). They decide to reschedule the meeting to Tuesday at 9 am, so they modify the event on their calendar (ModifyEvent). They also want to check the weather for Monday to see if they need an umbrella (CurrentWeather). They see that it will be rainy, so they add a reminder to bring an umbrella (AddReminder). They also want to complete the reminder for the report, so they mark it as done (CompleteReminder).",
+      "suites_used": [
+        "Calendar",
+        "Reminder"
+      ],
+      "apis_used": [
+        "AddReminder",
+        "ModifyEvent",
+        "QueryCalendar"
+      ]
+    }
+  },
+  {
+    "intent": "Can you check my calendar for any meetings from 9/15-9/21? I'm going to leave for Paris on 9/15, so can you move the meeting with Alice to 1 pm on 9/16? And can you shift each of the other two meetings later by 3 hours? Can you send an email to Alice (alis@fmail.com), Bob (bobbyboi@gahoo), and Tracy (mymomisthebest@somail.com) notifying them that I will be working from Paris from 9/15-9/21?",
+    "action": "Call QueryCalendar with start_time=2023-09-15 00:00:00; end_time=2023-09-21 23:59:59 Then Call ModifyEvent with event_id=2ff57743-1180; new_start_time=2023-09-16 13:00:00; new_end_time=2023-09-16 13:30:00 Then Call ModifyEvent with event_id=7ea2fc9f-f7b4; new_start_time=2023-09-18 17:00:00; new_end_time=2023-09-18 18:00:00 Then Call ModifyEvent with event_id=7cdd6d20-040e; new_start_time=2023-09-19 14:00:00; new_end_time=2023-09-19 14:30:00 Then Call SendEmail with to=alis@fmail.com, bobbyboi@gahoo, mymomisthebest@somail.com; subject=Working from Paris; body=I will be working from Paris from 9/15-9/21.",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "5077c89c-8134-4562-bd5f-805fa9678c33",
+      "name": "Calendar-Reminder-Weather-QueryCalendar-0",
+      "scenario": "The user wants to plan a trip to Paris with their friends. They want to check their calendar for any events that might conflict with their travel dates (QueryCalendar). They find that they have a meeting on the first day of their trip, so they decide to modify the event to a later date (ModifyEvent). They also want to create a reminder to book their flight tickets (AddReminder). They then want to see the weather forecast for Paris to decide what to pack (ForecastWeather). They also want to compare the current weather in Paris with their home city (CurrentWeather + CurrentWeather).",
+      "suites_used": [
+        "Calendar",
+        "Email"
+      ],
+      "apis_used": [
+        "SendEmail",
+        "ModifyEvent",
+        "QueryCalendar"
+      ]
+    }
+  },
+  {
+    "intent": "I couldn't finish my report on time. Can you delete my reminder to finish the report by 8 am today? Can you send an email asking the professor (profx@gahoo.com) for an extension to 3 pm? Set a reminder to check my email in an hour.",
+    "action": "Call GetReminders Then Call DeleteReminder with reminder_id=0b-5119 Then Call SendEmail with to=profx@gahoo.com; subject=Extension for report; body=Hey professor, I couldn't finish my report on time. Can I have an extension to 3 pm today? Thanks, Hugo Then Call AddReminder with task=check your email; due_date=2023-09-11 10:00:00",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "25921b06-9668-4be7-b28c-d8432db6103b",
+      "name": "Email-Messages-Reminder-DeleteReminder-1",
+      "scenario": "The user wants to delete a reminder for a task that they have postponed to a later date. They first log in to the app and get a session_token. They then use the GetReminders API to see all their reminders. They find the reminder_id of the task they want to delete and use the DeleteReminder API to remove it. They then use the AddReminder API to create a new reminder for the same task, but with a different due_date. They then use the SearchInbox API to look for any emails from the task assigner, using the assigner's email address as the sender parameter and the task name as the query. They open the most recent email and use the SendEmail API to inform the assigner that they have postponed the task and updated the reminder. They then use the SearchMessages API to look for any messages from the assigner, using the assigner's username as the sender parameter and the task name as the query. They open the most recent message and use the SendMessage API to send an apology message that they have postponed the task and updated the reminder.",
+      "suites_used": [
+        "Email",
+        "Reminder"
+      ],
+      "apis_used": [
+        "GetReminders",
+        "SendEmail",
+        "DeleteReminder",
+        "AddReminder"
+      ]
+    }
+  },
+  {
+    "intent": "I need to catch up on Nick's memes. Can you look for messages from (nickie) mentioning \"video\"? lol that first video was funny, can you send it to vick (ickyvicky)? Also reply to Nick saying lol",
+    "action": "Call SearchMessages with query=video; sender=nickie Then Call SendMessage with receiver=ickyvicky; message=Check out this video: utube.com/slkd Then Call SendMessage with receiver=nickie; message=lol",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "9a308bfa-6e45-42db-b65c-ae0bcd80b6de",
+      "name": "Email-Messages-Reminder-SearchMessage-1",
+      "scenario": "The user wants to chat with their friend who is also using the same app. They first search for messages from their friend using their username (SearchMessages). They then open the most recent message and reply to it (SendMessage). They then want to see if their friend has read the message, so they search for messages from their friend again (SearchMessages). They then open the message they just sent and check the read status (no API call). They then see that their friend has replied with a link to a funny video, so they open the link and watch the video (no API call). They then want to share the video with another friend, so they copy the link and send a message to the other friend (SendMessage).",
+      "suites_used": [
+        "Email",
+        "Messages",
+        "Reminder"
+      ],
+      "apis_used": [
+        "SearchMessages",
+        "SendMessage"
+      ]
+    }
+  },
+  {
+    "intent": "ugh need to do a digital cleanup. Can you delete all the reminders that were due in the past month? Thanks, can you also send a summary of the reminders you deleted to my personal email (hugoes@fmail.com)?",
+    "action": "Call GetReminders Then Call DeleteReminder with reminder_id=0b-5119 Then Call DeleteReminder with reminder_id=14-579a Then Call DeleteReminder with reminder_id=1f-8a4c Then Call SendEmail with to=hugoes@fmail.com; subject=Deleted reminders; body=Hi Hugo, I have deleted the following reminders:\n\n- Finish report\n- submit blog post\n- Buy Brody a birthday present\n\nRegards, your assistant",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "bd463e6e-8fc7-43ac-95ce-e620ec3e013d",
+      "name": "Email-Messages-Reminder-SendEmail-2",
+      "scenario": "The user wants to delete some old emails and reminders that are no longer relevant. They search their inbox (SearchInbox) for emails older than a year using the query \"*\" and the end_date \"2019-10-01 00:00:00\". They select all the emails and delete them. They then search their reminders (GetReminders) for reminders that are past due. They find several reminders that they have already completed or cancelled. They delete each reminder (DeleteReminder) using the reminder_id. They then send an email (SendEmail) to their personal account with the subject \"Backup\" and the body \"Hi user, this is a backup of your important emails and reminders. Please keep it safe. Regards, user\". They attach a file containing the emails and reminders that they want to keep. They then complete the reminder (CompleteReminder) with the task \"Backup emails and reminders\" using the reminder_id. They then log out of their account.",
+      "suites_used": [
+        "Email",
+        "Reminder"
+      ],
+      "apis_used": [
+        "GetReminders",
+        "SendEmail",
+        "DeleteReminder"
+      ]
+    }
+  },
+  {
+    "intent": "Hi I want to find out what Nick (nickie) likes, so can you search for \"like\" in my messages with him? Ok, can you send him a message saying \"Do you want to go to Castle Rock this Saturday?\" with a emoji of a climber?",
+    "action": "Call SearchMessages with query=like; sender=nickie Then Call SendMessage with receiver=nickie; message=Do you want to go to Castle Rock this Saturday? \ud83e\uddd7\u200d\u2640",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "251a792c-c843-4a69-86b2-8161542b6987",
+      "name": "Email-Messages-Reminder-SendMessage-2",
+      "scenario": "The user wants to send a message to their crush to ask them out. They first search their messages for any messages from their crush that contain the word \"like\" (SearchMessages). They find a message where their crush says they like the same movie as the user. They decide to use that as a conversation starter and send a message asking their crush if they want to watch the movie together (SendMessage). They then add a reminder to check their crush's reply in an hour (AddReminder). They then search their inbox for any emails from their crush that contain the word \"date\" (SearchInbox). They find an email where their crush invites them to a group date with some mutual friends. They reply with a yes and ask for the details (SendEmail). They then complete the reminder for checking their crush's reply (CompleteReminder). They see that their crush has agreed to watch the movie with them and send a message with a happy emoji (SendMessage).",
+      "suites_used": [
+        "Messages"
+      ],
+      "apis_used": [
+        "SearchMessages",
+        "SendMessage"
+      ]
+    }
+  },
+  {
+    "intent": "I want to ask Virginia from FindADate out on a date but not sure if we should go to the park or some cafe. Can you check the weather tomorrow? Ok can you search through messages with her for \"milk\"? It's decture Ok send her a message saying \"Meet me at Oatz tomorrow at 10. You'll get why people are so obsessed once you try their latte.\"",
+    "action": "Call ForecastWeather with location=New York Then Call SearchMessages with query=milk; sender=decture Then Call SendMessage with receiver=decture; message=Meet me at Oatz tomorrow at 10. You'll get why people are so obsessed once you try their latte.",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "41778a52-58b0-4ff1-aa42-e82eb8fe904b",
+      "name": "Email-Messages-Weather-SendMessage-2",
+      "scenario": "The user wants to send a message to their online date to ask them out for a coffee. They want to impress them with their knowledge of the weather and suggest a nice place to meet. They want to check the historic weather of their date's location to see if there is a pattern or trend (HistoricWeather). They search for the weather of their date's location for the last 10 days (HistoricWeather). They find that the weather has been mostly sunny and warm. They also want to check the forecast weather of their date's location for the next 3 days to see if there is any chance of rain or snow (ForecastWeather). They find that the weather will be mostly cloudy and cool. They then search for messages from their date to see if they have mentioned any preferences or hobbies (SearchMessages). They search for messages with the sender \"date\" and the query \"coffee\" or \"hobby\" in the last week (SearchMessages). They find that their date likes coffee with almond milk and enjoys reading books. They then compose a message to their date with the weather information and a suggestion of a cozy cafe with a bookshelf (SendMessage).",
+      "suites_used": [
+        "Weather",
+        "Messages"
+      ],
+      "apis_used": [
+        "SearchMessages",
+        "SendMessage",
+        "ForecastWeather"
+      ]
+    }
+  },
+  {
+    "intent": "When is my submission deadline for my blog post? Ok maybe I'll just write about the weather. What's the weather today and the historic weather for the month? Ok send an email to my editor (larajean) with this link to my blog post draft: 'docshare.com/12o89417uoihjns' Ok mark reminder as complete",
+    "action": "Call GetReminders Then Call CurrentWeather with location=San Francisco Then Call HistoricWeather with location=San Francisco; month=September Then Call QueryUser with username=larajean Then Call SendEmail with to=lara.jean@fmail.com; subject=blog post; body=here's my blogpost draft: docshare.com/12o89417uoihjns Then Call CompleteReminder with reminder_id=14-579a",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "f91e4a9d-7a72-4512-889c-5586378e1138",
+      "name": "Email-Reminder-Weather-CompleteReminder-2",
+      "scenario": "The user has a reminder to write a blog post about the weather trends in their city (AddReminder). They use the HistoricWeather API to get the weather data for the past month (HistoricWeather). They analyze the data and write the blog post. They then search their inbox for any emails from their editor or readers (SearchInbox). They reply to any relevant emails and ask for feedback on their post (SendEmail). They complete the reminder (CompleteReminder).",
+      "suites_used": [
+        "Email",
+        "AccountTools",
+        "Reminder",
+        "Weather"
+      ],
+      "apis_used": [
+        "CurrentWeather",
+        "CompleteReminder",
+        "GetReminders",
+        "SendEmail",
+        "QueryUser",
+        "HistoricWeather"
+      ]
+    }
+  },
+  {
+    "intent": "Can you check my email for information about the meeting today at 3 about going over our team's goals? Ok can you delete my reminder to write up some goals and add a new reminder to follow up with my manager at 3?",
+    "action": "Call SearchInbox with query=meeting 3 Then Call GetReminders Then Call DeleteReminder with reminder_id=4f-7a1d Then Call AddReminder with task=follow up with my manager at 3",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "dff87b01-d181-4323-9955-655bc991ac4e",
+      "name": "Email-Reminder-Weather-DeleteReminder-0",
+      "scenario": "The user wants to delete a reminder for a meeting that has been cancelled. They first want to check their inbox for any emails related to the meeting (SearchInbox). They find one email from the organizer confirming the cancellation and another email from a colleague asking for some feedback on a report (SearchInbox). They reply to the organizer with a polite message (SendEmail) and open the report attachment from the colleague. They decide to add a new reminder to review the report later (AddReminder). They then go to their list of reminders (GetReminders) and find the reminder for the cancelled meeting. They delete the reminder (DeleteReminder) and check the current weather (CurrentWeather) to see if they can go for a walk.",
+      "suites_used": [
+        "Email",
+        "Reminder"
+      ],
+      "apis_used": [
+        "GetReminders",
+        "DeleteReminder",
+        "AddReminder",
+        "SearchInbox"
+      ]
+    }
+  },
+  {
+    "intent": "Can you check my reminders for today? Ok I got the intern (larajean) to do that for me, can you find the email they sent? Copy the body of the newest one and send it to Jeff with the title 'My invoices'. And mark my reminer as complete.",
+    "action": "Call GetReminders Then Call QueryUser with username=larajean Then Call SearchInbox with sender=lara.jean@fmail.com; query=Your invoices Then Call QueryUser with username=geoff Then Call SendEmail with to=geoff.smith@example.com; subject=My invoices; body=I completed your invoices for last month. Here they are: MyCloudDocs.com/invoice-12345 Then Call CompleteReminder with reminder_id=1f-8a4c",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "c135a231-484f-4e82-937e-d4853cb13eef",
+      "name": "Email-Reminder-Weather-GetReminder-0",
+      "scenario": "The user wants to check their reminders for the day (GetReminders). They see that they have a reminder to send an email to their boss with a report attached (SendEmail). They search their inbox for the report that was sent to them by a colleague (SearchInbox). They find the email and download the attachment. They compose the email to their boss and send it (SendEmail). They then mark the reminder as complete (CompleteReminder).",
+      "suites_used": [
+        "Email",
+        "AccountTools",
+        "Reminder"
+      ],
+      "apis_used": [
+        "CompleteReminder",
+        "SearchInbox",
+        "GetReminders",
+        "SendEmail",
+        "QueryUser"
+      ]
+    }
+  },
+  {
+    "intent": "I want to go to Edinburgh this weekend, can you check the weather conditions? Perfect. Can you look up my email for anything about Edinburgh? Ok can you reply to Sally saying that I will be visiting this weekend? And add a reminder for me to pack my bags tonight at 8pm.",
+    "action": "Call ForecastWeather with location=Edinburgh Then Call SearchInbox with query=Edinburgh Then Call SendEmail with to=sallee@fakemail.com; subject=Re: Come visit me in Edinburgh; body=Hey Sally, I will be visiting this weekend. I'm looking forward to seeing you! Then Call AddReminder with task=Pack bags; due_date=2023-09-14 20:00:00",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "36db426f-eeac-44eb-b3bd-bc797b83f005",
+      "name": "Email-Reminder-Weather-SearchInbox-1",
+      "scenario": "The user wants to plan a weekend trip to a nearby city (ForecastWeather). They search their inbox for any travel deals or coupons they might have received (SearchInbox). They find a promotional code for a hotel booking site and decide to use it (SendEmail). They also find an email from their friend who lives in the city, asking them to visit (SendEmail). They reply to their friend and ask for some recommendations on what to do and see in the city (SendEmail). They also add a reminder to pack their bags and print their tickets (AddReminder).",
+      "suites_used": [
+        "Email",
+        "Reminder",
+        "Weather"
+      ],
+      "apis_used": [
+        "SearchInbox",
+        "SendEmail",
+        "AddReminder",
+        "ForecastWeather"
+      ]
+    }
+  },
+  {
+    "intent": "Hi can you check my reminders. Okay, I completed the survey. Can you check for Sarah's (sarah.wolfe@myfictionalemail.com) presentation in my inbox? Can you reply to Sarah saying that it's mostly good but she should talk slower and reduce the number of words on her slides? Awesome, can you mark the reminder as complete?",
+    "action": "Call GetReminders Then Call CompleteReminder with reminder_id=1f-2a3b Then Call SearchInbox with sender=sarah.wolfe@myfictionalemail.com Then Call SendEmail with to=sarah.wolfe@myfictionalemail.com; subject=Re: Your presentation; body=Hi Sarah,\n\nI watched your presentation video and I think it's mostly good. I think you should talk slower and reduce the number of words on your slides.\n\nThanks,\nLi Then Call CompleteReminder with reminder_id=ff-7890",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "3dac15e3-932a-4251-adf7-40220fa50eb1",
+      "name": "Email-Reminder-Weather-SendEmail-2",
+      "scenario": "The user wants to send an email to their colleague with some feedback on their presentation (SendEmail). They first watch the presentation video and take some notes. They then write an email with their feedback and suggestions. They also want to add a reminder to follow up with their colleague in a week (AddReminder). They then send the email (SendEmail). They then want to see if they have any other pending tasks, so they get a list of their reminders (GetReminders). They see that they have a reminder to complete a survey that is due today. They click on the link in the reminder and complete the survey. They then mark the reminder as complete (CompleteReminder). They also want to see how the weather has changed since they started working from home, so they query the historic weather data for the past month (HistoricWeather).",
+      "suites_used": [
+        "Email",
+        "Reminder"
+      ],
+      "apis_used": [
+        "GetReminders",
+        "CompleteReminder",
+        "SendEmail",
+        "SearchInbox"
+      ]
+    }
+  },
+  {
+    "intent": "I need to organize my reminders. Can you add a reminder to finish my report by Friday and a reminder to call my mom on 9/17 for her birthday? Can you check if I have any other reminders for the week? Ok, I already called Amy. Can you delete that one?",
+    "action": "Call AddReminder with task=finish your report; due_date=2023-09-15 23:59:59 Then Call AddReminder with task=call your mom; due_date=2023-09-17 23:59:59 Then Call GetReminders Then Call DeleteReminder with reminder_id=14-579a",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "a2b446cd-055b-4173-9f4c-8b61dcab7b63",
+      "name": "Messages-Reminder-Weather-AddReminder-1",
+      "scenario": "The user wants to organize their tasks for the week. They want to add a reminder to finish their project report by Friday (AddReminder). They also want to add a reminder to call their mom on her birthday on Wednesday (AddReminder). They want to get a list of their reminders to see what else they need to do (GetReminders). They realize they have already completed one of their reminders, so they want to delete it (DeleteReminder). They also want to check the weather for the weekend to see if they can go hiking (ForecastWeather).",
+      "suites_used": [
+        "Reminder"
+      ],
+      "apis_used": [
+        "AddReminder",
+        "GetReminders",
+        "DeleteReminder"
+      ]
+    }
+  },
+  {
+    "intent": "I forgot to pay rent this month. Can you set a reminder for me to pay rent on the first day of the month for the rest of the year? I sent a message to my landlord apologizing about the late rent. Can you mark my reminder to do that as complete?",
+    "action": "Call AddReminder with task=Pay rent; due_date=2023-10-01 00:00:00 Then Call AddReminder with task=Pay rent; due_date=2023-11-01 00:00:00 Then Call AddReminder with task=Pay rent; due_date=2023-12-01 00:00:00 Then Call GetReminders Then Call CompleteReminder with reminder_id=59-80bc",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "8ab3dafb-ef39-48d8-aae4-22fddab8d489",
+      "name": "Messages-Reminder-Weather-CompleteReminder-1",
+      "scenario": "The user wants to complete a reminder to pay their rent. They want to see how much money they have left in their bank account (GetBalance). They see that they have enough to pay the rent, but not much more. They want to see if they can save some money by switching to a cheaper electricity plan (GetElectricityPlans). They see that there is a plan that offers a lower rate, but requires a 12-month contract. They want to see how the weather has changed in their area in the past year (HistoricWeather). They see that there have been more hot and cold days than usual, which means more electricity usage. They decide to stick with their current plan, which has no contract. They pay their rent online (PayRent). They complete the reminder to pay their rent (CompleteReminder).",
+      "suites_used": [
+        "Reminder"
+      ],
+      "apis_used": [
+        "AddReminder",
+        "GetReminders",
+        "CompleteReminder"
+      ]
+    }
+  },
+  {
+    "intent": "Hi, I'm back to ask about weather again for my temperature blankets. What's the high in New York, London, Tokyo, and Sydney today? Cool, I've been using the same colors for the New York and Tokyo blankets a lot recently. Do you know if it'll change soon? Ok, can you set a reminder for me to buy more yarn tomorrow? And if I've set any reminders for the rest of the month to buy more yarn can you delete those?",
+    "action": "Call CurrentWeather with location=New York Then Call CurrentWeather with location=London Then Call CurrentWeather with location=Tokyo Then Call CurrentWeather with location=Sydney Then Call ForecastWeather with location=New York Then Call ForecastWeather with location=Tokyo Then Call AddReminder with task=Buy more yarn Then Call GetReminders Then Call DeleteReminder with reminder_id=0b-5119",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "45ede01b-e809-4144-8762-29672c53dcc6",
+      "name": "Messages-Reminder-Weather-ForecastWeather-1",
+      "scenario": "The user is a weather enthusiast and wants to compare the current weather of different cities around the world. They want to get the current weather of New York, London, Tokyo, and Sydney (CurrentWeather x 4). They want to save the results in a message to themselves (SendMessage). They want to set a reminder to check the weather again in 24 hours (AddReminder). They want to get the 3-day forecast weather of the same cities (ForecastWeather x 4). They want to delete the reminder they set earlier (DeleteReminder).",
+      "suites_used": [
+        "Reminder",
+        "Weather"
+      ],
+      "apis_used": [
+        "CurrentWeather",
+        "AddReminder",
+        "DeleteReminder",
+        "GetReminders",
+        "ForecastWeather"
+      ]
+    }
+  },
+  {
+    "intent": "Hi can you check my reminders for the day? Thanks, my friend mentioned that there's a storm where Bob is- can you check the weather? Bob's in New York. Can you also check the weather for the next few days over there? Thanks, can you send a message to confirm he's still up to call at 3? Also can you add an alarm for my groceries? It's bobbyboi",
+    "action": "Call GetReminders Then Call CurrentWeather with location=New York Then Call ForecastWeather with location=New York Then Call AddAlarm with time=18:00:00 Then Call SendMessage with receiver=bobbyboi; message=Are you still available to call at 3?",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "606698d5-ea90-42a3-beed-50f23f629800",
+      "name": "Messages-Reminder-Weather-GetReminder-0",
+      "scenario": "The user wants to check their reminders for the day (GetReminders). They see that they have a reminder to call their friend Bob, who lives in New York, at 3 pm. They want to know what the weather is like in New York, so they can make some small talk (CurrentWeather). They also want to know if the weather will change in the next few days, so they can suggest some activities for Bob to do (ForecastWeather). They decide to send a message to Bob to confirm the call and mention the weather (SendMessage). They also want to search for any previous messages from Bob that mentioned the weather, to see if he likes it or not (SearchMessages).",
+      "suites_used": [
+        "Alarm",
+        "Reminder",
+        "Weather",
+        "Messages"
+      ],
+      "apis_used": [
+        "CurrentWeather",
+        "GetReminders",
+        "SendMessage",
+        "AddAlarm",
+        "ForecastWeather"
+      ]
+    }
+  },
+  {
+    "intent": "Hi, I'm working on a project about weather patterns in New York for my AP Environmental Science class. Can you pull up the data on what the average temperature has been for today for each year in the last decade? That's annoying. Do you have any historical data about the weather here in September? Ok, I don't think that's good enough for my project. Can you check my email for any messages from my teacher about weather? Ok great, can you send an email to everyone else Mrs. Fritz sent that email to asking if any of the websites were useful? And then set a reminder for me to check my email in 3 hours.",
+    "action": "Call CurrentWeather with location=San Francisco Then Call HistoricWeather with location=San Francisco; month=September Then Call SearchInbox with query=weather Then Call GetAccountInformation Then Call SendEmail with to=lifeng@gahoo.com, steinki89@fexter.com, hugosalcano@somail.com; subject=Did you find the websites useful?; body=Did anyone try the websites yet? Are any of the websites useful? Then Call AddReminder with task=check my email; due_date=2023-09-11 19:00:00",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "f5bccae7-ab75-4c20-a5a6-87aa456c36fe",
+      "name": "Messages-Reminder-Weather-SearchMessage-2",
+      "scenario": "The user wants to do some research on the weather patterns of New York for a school project. They use HistoricWeather to get the weather data of New York for the past month. They see that the data is incomplete and only has 10 records. They use SearchMessages to look for any messages from their teacher with the query \"weather\". They see that they have a message from two days ago that says they can use any online source for the data. They use SendMessage to thank their teacher and ask for some recommendations. They get a reply with a link to a website that has more data. They use GetReminders to see if they have any reminders for the project. They see that they have one with the task \"Submit weather project\" and the due_date set to next Monday. They use DeleteReminder to delete the reminder and create a new one with the same task and due_date, but with a note that says \"Use website for data\".",
+      "suites_used": [
+        "Email",
+        "AccountTools",
+        "Reminder",
+        "Weather"
+      ],
+      "apis_used": [
+        "CurrentWeather",
+        "AddReminder",
+        "SearchInbox",
+        "SendEmail",
+        "GetAccountInformation",
+        "HistoricWeather"
+      ]
+    }
+  },
+  {
+    "intent": "Hey, I want to send my dad (bestdad) a message updating them on my flight info and arrival time. Can you also check the weather back in Boston to see if my flight might be delayed? I'll be on UA111 and should arrive around 10PM, but since it's rainy the flight might be delayed. Can you also set a reminder for me to call my dad when I land?",
+    "action": "Call CurrentWeather with location=Boston Then Call SendMessage with receiver=bestdad; message=Hi Dad, I'll be on UA111 and should arrive around 10PM. Then Call AddReminder with task=call dad when I land",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "d29f91e2-fca5-427c-847c-a33a826e20be",
+      "name": "Messages-Reminder-Weather-SendMessage-2",
+      "scenario": "The user wants to send a message to their family about their vacation. They first use the HistoricWeather API to get the weather information of the location they visited for the past week. They see that it was mostly rainy and cold. They then use the CurrentWeather API to get the weather information of their current location, which is a different city. They see that it is sunny and warm. They then use the ForecastWeather API to get the weather information of their destination, which is their home city. They see that it is cloudy and mild. They then use the SendMessage API to send their family a message with their weather comparison and some photos of their trip. They also tell their family their flight details and their expected arrival time. They use the AddReminder API to create a reminder to check in with their family when they land.",
+      "suites_used": [
+        "Reminder",
+        "Weather",
+        "Messages"
+      ],
+      "apis_used": [
+        "CurrentWeather",
+        "AddReminder",
+        "SendMessage"
+      ]
+    }
+  },
+  {
+    "intent": "Hello, what meetings and events do I have on my schedule for today? My username is justinkool and my password is [REDACTED]. Yes please. Oh shoot, I forgot about my doctor's appointment. I can't reschedule my team meeting, so can you send an email to my team letting them know I won't be able to make it? That sounds good. Please send it.",
+    "action": "Call UserLogin with username=justinkool Then Call QueryCalendar with start_time=2023-09-11 09:00:00; end_time=2023-09-11 23:59:59 Then Call QueryUser with username=lifeng Then Call QueryUser with username=salcano Then Call QueryUser with username=mstein Then Call SendEmail with to=lifeng@gahoo.com, hugosalcano@somail.com, steinki89@fexter.com; subject=Can't make it to meeting; body=Hi team, I'm sorry but I won't be able to make it to today's meeting. I have a doctor's appointment that I forgot about. I'll send out my updates later today. Thanks, Justin",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "1",
+      "name": "golden_conversation_1",
+      "scenario": null,
+      "suites_used": [
+        "Calendar",
+        "AccountTools",
+        "Email"
+      ],
+      "apis_used": [
+        "UserLogin",
+        "QueryCalendar",
+        "QueryUser",
+        "SendEmail"
+      ]
+    }
+  },
+  {
+    "intent": "Hey, I think I need a break. Do I have an hour for a walk? Yes, please block the next hour for me.",
+    "action": "Call QueryCalendar with start_time=2023-09-11 13:20:00; end_time=2023-09-11 14:20:00 Then Call CreateEvent with name=Walk; event_type=event; start_time=2023-09-11 13:20:00; end_time=2023-09-11 14:20:00",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "2",
+      "name": "golden_conversation_2",
+      "scenario": null,
+      "suites_used": [
+        "Calendar"
+      ],
+      "apis_used": [
+        "QueryCalendar",
+        "CreateEvent"
+      ]
+    }
+  },
+  {
+    "intent": "Hey I have a one on one but the other person hasn't show up yet. Did the meeting get cancelled? Hmm, that might be too slow. Do you have his phone number? Also can you check if he's sent any messages? Yes, can you reschedule the meeting to tomorrow at the same time? Also send him a message asking what's going on and that I've rescheduled the meeting.",
+    "action": "Call QueryCalendar with start_time=2023-09-11 14:00:00; end_time=2023-09-11 15:00:00 Then Call SearchMessages with sender=salcano Then Call QueryUser with username=salcano Then Call ModifyEvent with event_id=294b409-6535; new_start_time=2023-09-12 14:00:00; new_end_time=2023-09-12 15:00:00 Then Call SendMessage with receiver=salcano; message=Hey Hugo, I've rescheduled our meeting to tomorrow at the same time. What's going on?",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "3",
+      "name": "golden_conversation_3",
+      "scenario": null,
+      "suites_used": [
+        "Calendar",
+        "Messages",
+        "AccountTools"
+      ],
+      "apis_used": [
+        "QueryCalendar",
+        "SearchMessages",
+        "QueryUser",
+        "ModifyEvent",
+        "SendMessage"
+      ]
+    }
+  },
+  {
+    "intent": "Hey assistant, what's on my calendar for next week? That doesn't seem right. What about this week? Oh I guess I must've forgotten to extend the weekly team sync. Can you set it up to occur weekly until the end of next month?",
+    "action": "Call QueryCalendar with start_time=2023-09-18 00:00:00; end_time=2023-09-22 23:59:59 Then Call QueryCalendar with start_time=2023-09-11 00:00:00; end_time=2023-09-15 23:59:59 Then Call CreateEvent with name=Weekly team sync; event_type=event; start_time=2023-09-18 09:00:00; end_time=2023-09-18 10:00:00; location=online; description=Weekly sync; attendees=justinkool, salcano, ahhchiu, decture Then Call CreateEvent with name=Weekly team sync; event_type=event; start_time=2023-09-25 09:00:00; end_time=2023-09-25 10:00:00; location=online; description=Weekly sync; attendees=justinkool, salcano, ahhchiu, decture Then Call CreateEvent with name=Weekly team sync; event_type=event; start_time=2023-10-02 09:00:00; end_time=2023-10-02 10:00:00; location=online; description=Weekly sync; attendees=justinkool, salcano, ahhchiu, decture Then Call CreateEvent with name=Weekly team sync; event_type=event; start_time=2023-10-09 09:00:00; end_time=2023-10-09 10:00:00; location=online; description=Weekly sync; attendees=justinkool, salcano, ahhchiu, decture Then Call CreateEvent with name=Weekly team sync; event_type=event; start_time=2023-10-16 09:00:00; end_time=2023-10-16 10:00:00; location=online; description=Weekly sync; attendees=justinkool, salcano, ahhchiu, decture Then Call CreateEvent with name=Weekly team sync; event_type=event; start_time=2023-10-23 09:00:00; end_time=2023-10-23 10:00:00; location=online; description=Weekly sync; attendees=justinkool, salcano, ahhchiu, decture Then Call CreateEvent with name=Weekly team sync; event_type=event; start_time=2023-10-30 09:00:00; end_time=2023-10-30 10:00:00; location=online; description=Weekly sync; attendees=justinkool, salcano, ahhchiu, decture",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "4",
+      "name": "golden_conversation_4",
+      "scenario": "The user wants uses (QueryCalendar) to see what events occurred last week. They then copy their meetings for next week using (CreateEvent).",
+      "suites_used": [
+        "Calendar"
+      ],
+      "apis_used": [
+        "CreateEvent",
+        "QueryCalendar"
+      ]
+    }
+  },
+  {
+    "intent": "Hey I've been getting too much spam lately. Can I create a new account? Probably delete it after creating the new one. Sure, it's [REDACTED]. I think I have some alarms and events next month that I want to keep though. Can you check for me? Can you keep just my events and instead set an alarm for 8 AM? Can you set the username to kongster, the password to [REDACTED], and the email to kong.zi@gahoo.com?",
+    "action": "Call QueryCalendar with start_time=2023-10-01 00:00:00; end_time=2023-10-31 23:59:59 Then Call FindAlarms Then Call DeleteAccount Then Call RegisterUser with username=kongster; email=kong.zi@gahoo.com Then Call AddAlarm with time=08:00:00 Then Call CreateEvent with name=Matt's Birthday; event_type=event; start_time=2023-10-04 00:00:00; end_time=2023-10-04 23:59:59 Then Call CreateEvent with name=The Cave; event_type=event; start_time=2023-10-31 20:00:00; end_time=2023-11-01 02:00:00",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "5",
+      "name": "golden_conversation_5",
+      "scenario": "The user wants to create a new account. However, they want to keep any events (no meetings) occurring for the next month. They also want to keep any alarms. The user wants uses (QueryCalendar) to see what events are occurring next month. They then recreate the events for their new account and deletes their old account (DeleteAccount).",
+      "suites_used": [
+        "Alarm",
+        "Calendar",
+        "AccountTools"
+      ],
+      "apis_used": [
+        "QueryCalendar",
+        "CreateEvent",
+        "AddAlarm",
+        "FindAlarms",
+        "RegisterUser",
+        "DeleteAccount"
+      ]
+    }
+  },
+  {
+    "intent": "Hello, I would like to create a new account. I heard some of my friends are on the platform. Sure, is hestler available? You can use j.hester@gahoo.com as my email address. My name is Julian Hester. Can you set my password to [REDACTED]? Great, can you check if my friends are on the platform as well? Their emails are justintime@fmail.com steinki89@fexter.com and bob.candi@fmail.com Ah, that's too bad. Can you send them a message for me? Just let them know I signed up",
+    "action": "Call RegisterUser with username=hestler; email=j.hester@gahoo.com; name=Julian Hester Then Call QueryUser with email=justintime@fmail.com Then Call QueryUser with email=steinki89@fexter.com Then Call QueryUser with email=bob.candi@fmail.com Then Call SendMessage with receiver=justinkool; message=Hey, I just signed up for the platform. How are you? Then Call SendMessage with receiver=mstein; message=Hey, I just signed up for the platform. How are you?",
+    "label": 1,
+    "category": "tooltalk_aligned",
+    "source": "tooltalk",
+    "split": "hard",
+    "metadata": {
+      "benchmark": "ToolTalk",
+      "conversation_id": "6",
+      "name": "golden_conversation_6",
+      "scenario": "The user creates a new account then wants to see if their friends have accounts as well. They have their email address, so they use (QueryUser) to look up their username and send them a message (SendMesage).",
+      "suites_used": [
+        "AccountTools",
+        "Messages"
+      ],
+      "apis_used": [
+        "SendMessage",
+        "RegisterUser",
+        "QueryUser"
+      ]
+    }
+  }
+]
