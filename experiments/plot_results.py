@@ -20,15 +20,21 @@ def main():
             "Run experiments/run_experiments.py first."
         )
 
-    summary_df = pd.read_csv(SUMMARY_PATH).sort_values(["method", "threshold"])
+    summary_df = pd.read_csv(SUMMARY_PATH)
+    dev_df = summary_df[summary_df["stage"] == "dev_sweep"].sort_values(["method", "threshold"])
+    best_df = summary_df[summary_df["stage"] == "test_best"].sort_values(["method"])
+
+    if dev_df.empty:
+        raise ValueError("No dev_sweep rows found in results_summary.csv.")
+
     PLOTS_DIR.mkdir(parents=True, exist_ok=True)
 
     fig, axes = plt.subplots(1, 3, figsize=(15, 4.5), sharex=True, sharey=True)
     metrics = ["accuracy", "precision", "recall"]
 
     for axis, metric_name in zip(axes, metrics):
-        for method in summary_df["method"].unique():
-            method_df = summary_df[summary_df["method"] == method]
+        for method in dev_df["method"].unique():
+            method_df = dev_df[dev_df["method"] == method]
             axis.plot(
                 method_df["threshold"],
                 method_df[metric_name],
@@ -43,7 +49,14 @@ def main():
 
     axes[0].set_ylabel("Score")
     axes[-1].legend()
-    fig.suptitle("Directional vs Cosine Metrics Across Thresholds")
+    if best_df.empty:
+        fig.suptitle("Directional vs Cosine Metrics Across Dev Threshold Sweep")
+    else:
+        best_note = "; ".join(
+            f"{row.method.title()} best={row.threshold:.4f}"
+            for row in best_df.itertuples()
+        )
+        fig.suptitle(f"Directional vs Cosine Metrics Across Dev Threshold Sweep\n{best_note}")
     plt.tight_layout()
     plt.savefig(PLOT_PATH, dpi=200)
     plt.close()
