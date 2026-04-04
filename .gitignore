@@ -4,3 +4,7 @@ __pycache__/
 results/
 .env
 .ipynb_checkpoints/
+paper_revised_manuscript.md
+paper_refined_draft.md
+paper_submission_draft.md
+paper_ieee_ready.md
