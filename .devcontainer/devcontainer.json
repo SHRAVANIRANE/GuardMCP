@@ -1,0 +1,40 @@
+{
+  "name": "GuardMCP",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+
+  "postCreateCommand": "bash .devcontainer/post-create.sh",
+
+  "forwardPorts": [8501, 8000],
+  "portsAttributes": {
+    "8501": {
+      "label": "Streamlit demo",
+      "onAutoForward": "openBrowser"
+    },
+    "8000": {
+      "label": "CLI / API (optional)",
+      "onAutoForward": "silent"
+    }
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.pylance",
+        "ms-toolsai.jupyter",
+        "charliermarsh.ruff"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "editor.formatOnSave": true,
+        "[python]": {
+          "editor.defaultFormatter": "charliermarsh.ruff"
+        }
+      }
+    }
+  },
+
+  "remoteEnv": {
+    "PYTHONPATH": "${containerWorkspaceFolder}"
+  }
+}
