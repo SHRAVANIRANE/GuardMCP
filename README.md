@@ -1,7 +1,7 @@
 # 🛡️ GuardMCP
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/SHRAVANIRANE/guardmcp?quickstart=1)
-[![CI](https://github.com/SHRAVANIRANE/guardmcp/actions/workflows/ci.yml/badge.svg)](https://github.com/SHRAVANIRANE/guardmcp/actions)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/SHRAVANIRANE/GuardMCP?quickstart=1)
+[![CI](https://github.com/SHRAVANIRANE/GuardMCP/actions/workflows/ci.yml/badge.svg)](https://github.com/SHRAVANIRANE/GuardMCP/actions)
 
 GuardMCP is a research prototype for checking whether an agent's proposed action stays semantically aligned with the user's intent.
 
