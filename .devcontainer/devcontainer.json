@@ -1,10 +1,12 @@
 {
   "name": "GuardMCP",
   "image": "mcr.microsoft.com/devcontainers/python:3.12",
-
   "postCreateCommand": "bash .devcontainer/post-create.sh",
-
-  "forwardPorts": [8501, 8000],
+  "workspaceFolder": "/workspaces/GuardMCP",
+  "forwardPorts": [
+    8501,
+    8000
+  ],
   "portsAttributes": {
     "8501": {
       "label": "Streamlit demo",
@@ -15,7 +17,6 @@
       "onAutoForward": "silent"
     }
   },
-
   "customizations": {
     "vscode": {
       "extensions": [
@@ -33,7 +34,6 @@
       }
     }
   },
-
   "remoteEnv": {
     "PYTHONPATH": "${containerWorkspaceFolder}"
   }
