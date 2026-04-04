@@ -209,9 +209,7 @@ Interpretation:
 - the grouped reports now show which sources and attack families are hardest
 - on the current split, directional and cosine ended up making the same final `test` decisions after calibration
 
-## Presentation-Friendly Summary
-
-You can describe GuardMCP like this:
+## Summary
 
 `GuardMCP is a research prototype for semantic guardrails in tool-using AI agents. It compares a directional intent-action alignment method against cosine similarity using local adversarial examples and adapted public benchmarks such as ToolTalk and AgentDojo.`
 
